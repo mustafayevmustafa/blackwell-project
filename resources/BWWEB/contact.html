@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contact</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+
+  <link href="/assets/img/logo.png" rel="icon">
+  <link href="/assets/img/logo.png" rel="apple-touch-icon">
+
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/headersection.css">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/languagepage.css">
+
+
+</head>
+
+<body class="contact-page">
+  <div id="top-black-menu" style="width: 100%; height: 30px; background-color: black;" class="fixed-top">
+    <div class="container-fluid container-xl h-100 d-flex justify-content-end gap-4 align-items-center">
+      <a class="text-light" style="font-size: 12px;" href="./index.html">Home</a>
+      <a class="text-light" style="font-size: 12px;" href="#">Career</a>
+      <a class="text-light" style="font-size: 12px;" href="./technical.html">Technical Consultation</a>
+      <a class="text-light" style="font-size: 12px;">
+
+        <div class="elfsight-app-d3a63166-be5f-414d-be8e-111b893d9461" data-elfsight-app-lazy></div>
+
+          <a href="https://elfsight.com/website-translator-widget/?utm_source=websites&amp;utm_medium=clients&amp;utm_content=website-translator&amp;utm_term=127.0.0.1&amp;utm_campaign=free-widget"
+          target="_blank" rel="noreferrer" style="display: none !important;">
+        </a>
+
+      </a>
+    </div>
+  </div>
+        <!-- Overlay -->
+        <div class="quote-dark-overlay" id="quoteDarkOverlay" onclick="closeQuoteForm()"></div>
+
+        <!-- Get a Quote Form Section -->
+        <section class="quote-form-wrapper-main" id="quoteFormSection" style="display: none;">
+          <div class="quote-form-wrapper">
+            <h1 class="quote-form-title">Request a Quote</h1>
+            <form class="quote-form">
+              <div class="quote-form-row">
+                <div class="quote-form-column">
+                  <label for="quoteName" class="quote-label">Name:</label>
+                  <input type="text" id="quoteName" placeholder="Your Name" class="quote-input" required>
+                </div>
+                <div class="quote-form-column">
+                  <label for="quoteEmail" class="quote-label">Email:</label>
+                  <input type="email" id="quoteEmail" placeholder="Your Email" class="quote-input" required>
+                </div>
+              </div>
+  
+              <div class="quote-form-row">
+                <div class="quote-form-column">
+                  <label for="quoteCompany" class="quote-label">Company:</label>
+                  <input type="text" id="quoteCompany" placeholder="Company Name" class="quote-input">
+                </div>
+                <div class="quote-form-column">
+                  <label for="quotePosition" class="quote-label">Position:</label>
+                  <input type="text" id="quotePosition" placeholder="e.g. Project Manager, Engineer" class="quote-input">
+                </div>
+  
+              </div>
+  
+              <div class="quote-form-row1">
+                <div class="quote-form-column1">
+                  <label for="quoteDetails" class="quote-label">Details:</label>
+                  <textarea id="quoteDetails" rows="4" class="quote-textarea" placeholder="Tell us more..."
+                    required></textarea>
+                </div>
+              </div>
+  
+              <button type="submit" class="quote-submit-button">Submit Quote Request</button>
+            </form>
+            <button type="button" class="quote-close-form" onclick="closeQuoteForm()"><i
+                class="fa-solid fa-xmark"></i></button>
+          </div>
+        </section>
+  
+        <!-- Fixed CTA Button -->
+        <div class="quote-cta-fixed" onclick="openQuoteForm()">
+          <a class="cta-btn cta-btn--secondary" aria-label="Request a Quote">
+            <span class="cta-btn__text">Get a Quote</span>
+          </a>
+        </div>
+  
+  <header id="header" class="header d-flex align-items-center fixed-top" style="padding: 40px 0 10px 0;">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">
+          <img src="assets/img/Black%20Well%202.png" alt="Blackwell Your Supply Chain Partner" />
+        </h1>
+
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Product</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="blog.html">Blog</a></li>
+
+
+
+          <li class="dropdown"><a class="text-dark">Dropdown<span></span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+
+              <li class="dropdown black"><a><span class="text-dark">Partner</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="./dropdown pages/partners/tab-1.html">Deep Dropdown 1</a></li>
+                  <li><a href="./dropdown pages/partners/tab-2.html">Deep Dropdown 2</a></li>
+                  <li><a href="./dropdown pages/partners/tab-3.html">Deep Dropdown 3</a></li>
+                  <li><a href="./dropdown pages/partners/tab-4.html">Deep Dropdown 4</a></li>
+                  <li><a href="./dropdown pages/partners/tab-5.html">Deep Dropdown 5</a></li>
+                  <li><a href="./dropdown pages/partners/tab-6.html">Deep Dropdown 6</a></li>
+                  <li><a href="./dropdown pages/partners/tab-7.html">Deep Dropdown 7</a></li>
+                  <li><a href="./dropdown pages/partners/tab-8.html">Deep Dropdown 8</a></li>
+                  <li><a href="./dropdown pages/partners/tab-9.html">Deep Dropdown 9</a></li>
+                  <li><a href="./dropdown pages/partners/tab-10.html">Deep Dropdown 10</a></li>
+                  <li><a href="./dropdown pages/partners/tab-11.html">Deep Dropdown 11</a></li>
+                  <li><a href="./dropdown pages/partners/tab-12.html">Deep Dropdown 12</a></li>
+                  <li><a href="./dropdown pages/partners/tab-13.html">Deep Dropdown 13</a></li>
+                  <li><a href="./dropdown pages/partners/tab-14.html">Deep Dropdown 14</a></li>
+                  <li><a href="./dropdown pages/partners/tab-15.html">Deep Dropdown 15</a></li>
+                </ul>
+              </li>
+              <li class="dropdown black"><a><span class="text-dark">Block</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="./dropdown pages/block/tab-1.html">Deep Dropdown 1</a></li>
+                  <li><a href="./dropdown pages/block/tab-2.html">Deep Dropdown 2</a></li>
+                  <li><a href="./dropdown pages/block/tab-3.html">Deep Dropdown 3</a></li>
+                  <li><a href="./dropdown pages/block/tab-4.html">Deep Dropdown 4</a></li>
+                  <li><a href="./dropdown pages/block/tab-5.html">Deep Dropdown 5</a></li>
+                  <li><a href="./dropdown pages/block/tab-6.html">Deep Dropdown 6</a></li>
+                  <li><a href="./dropdown pages/block/tab-7.html">Deep Dropdown 7</a></li>
+                  <li><a href="./dropdown pages/block/tab-8.html">Deep Dropdown 8</a></li>
+                  <li><a href="./dropdown pages/block/tab-9.html">Deep Dropdown 9</a></li>
+                  <li><a href="./dropdown pages/block/tab-10.html">Deep Dropdown 10</a></li>
+                  <li><a href="./dropdown pages/block/tab-11.html">Deep Dropdown 11</a></li>
+                  <li><a href="./dropdown pages/block/tab-12.html">Deep Dropdown 12</a></li>
+                  <li><a href="./dropdown pages/block/tab-13.html">Deep Dropdown 13</a></li>
+                  <li><a href="./dropdown pages/block/tab-14.html">Deep Dropdown 14</a></li>
+                  <li><a href="./dropdown pages/block/tab-15.html">Deep Dropdown 15</a></li>
+                </ul>
+              </li>
+              <li class="dropdown black"><a><span class="text-dark">Dropdown</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="./dropdown pages/dropdown/tab-1.html">Deep Dropdown 1</a></li>
+                  <li><a href="./dropdown pages/dropdown/tab-2.html">Deep Dropdown 2</a></li>
+                  <li><a href="./dropdown pages/dropdown/tab-3.html">Deep Dropdown 3</a></li>
+                  <li><a href="./dropdown pages/dropdown/tab-4.html">Deep Dropdown 4</a></li>
+                  <li><a href="./dropdown pages/dropdown/tab-5.html">Deep Dropdown 5</a></li>
+                  <li><a href="./dropdown pages/dropdown/tab-6.html">Deep Dropdown 6</a></li>
+                  <li><a href="./dropdown pages/dropdown/tab-7.html">Deep Dropdown 7</a></li>
+                  <li><a href="./dropdown pages/dropdown/tab-8.html">Deep Dropdown 8</a></li>
+                  <li><a href="./dropdown pages/dropdown/tab-9.html">Deep Dropdown 9</a></li>
+                  <li><a href="./dropdown pages/dropdown/tab-10.html">Deep Dropdown 10</a></li>
+                  <li><a href="./dropdown pages/dropdown/tab-11.html">Deep Dropdown 11</a></li>
+                  <li><a href="./dropdown pages/dropdown/tab-12.html">Deep Dropdown 12</a></li>
+                  <li><a href="./dropdown pages/dropdown/tab-13.html">Deep Dropdown 13</a></li>
+                  <li><a href="./dropdown pages/dropdown/tab-14.html">Deep Dropdown 14</a></li>
+                  <li><a href="./dropdown pages/dropdown/tab-15.html">Deep Dropdown 15</a></li>
+                </ul>
+              </li>
+              <li class="dropdown black"><a><span class="text-dark">Contact</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="./dropdown pages/contact/tab-1.html">Deep Dropdown 1</a></li>
+                  <li><a href="./dropdown pages/contact/tab-2.html">Deep Dropdown 2</a></li>
+                  <li><a href="./dropdown pages/contact/tab-3.html">Deep Dropdown 3</a></li>
+                  <li><a href="./dropdown pages/contact/tab-4.html">Deep Dropdown 4</a></li>
+                  <li><a href="./dropdown pages/contact/tab-5.html">Deep Dropdown 5</a></li>
+                  <li><a href="./dropdown pages/contact/tab-6.html">Deep Dropdown 6</a></li>
+                  <li><a href="./dropdown pages/contact/tab-7.html">Deep Dropdown 7</a></li>
+                  <li><a href="./dropdown pages/contact/tab-8.html">Deep Dropdown 8</a></li>
+                  <li><a href="./dropdown pages/contact/tab-9.html">Deep Dropdown 9</a></li>
+                  <li><a href="./dropdown pages/contact/tab-10.html">Deep Dropdown 10</a></li>
+                  <li><a href="./dropdown pages/contact/tab-11.html">Deep Dropdown 11</a></li>
+                  <li><a href="./dropdown pages/contact/tab-12.html">Deep Dropdown 12</a></li>
+                  <li><a href="./dropdown pages/contact/tab-13.html">Deep Dropdown 13</a></li>
+                  <li><a href="./dropdown pages/contact/tab-14.html">Deep Dropdown 14</a></li>
+                  <li><a href="./dropdown pages/contact/tab-15.html">Deep Dropdown 15</a></li>
+                </ul>
+              </li>
+              <li class="dropdown black"><a><span class="text-dark">Dropdown Second</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="./dropdown pages/dropdown second/tab-1.html">Deep Dropdown 1</a></li>
+                  <li><a href="./dropdown pages/dropdown second/tab-2.html">Deep Dropdown 2</a></li>
+                  <li><a href="./dropdown pages/dropdown second/tab-3.html">Deep Dropdown 3</a></li>
+                  <li><a href="./dropdown pages/dropdown second/tab-4.html">Deep Dropdown 4</a></li>
+                  <li><a href="./dropdown pages/dropdown second/tab-5.html">Deep Dropdown 5</a></li>
+                  <li><a href="./dropdown pages/dropdown second/tab-6.html">Deep Dropdown 6</a></li>
+                  <li><a href="./dropdown pages/dropdown second/tab-7.html">Deep Dropdown 7</a></li>
+                  <li><a href="./dropdown pages/dropdown second/tab-8.html">Deep Dropdown 8</a></li>
+                  <li><a href="./dropdown pages/dropdown second/tab-9.html">Deep Dropdown 9</a></li>
+                  <li><a href="./dropdown pages/dropdown second/tab-10.html">Deep Dropdown 10</a></li>
+                  <li><a href="./dropdown pages/dropdown second/tab-11.html">Deep Dropdown 11</a></li>
+                  <li><a href="./dropdown pages/dropdown second/tab-12.html">Deep Dropdown 12</a></li>
+                  <li><a href="./dropdown pages/dropdown second/tab-13.html">Deep Dropdown 13</a></li>
+                  <li><a href="./dropdown pages/dropdown second/tab-14.html">Deep Dropdown 14</a></li>
+                  <li><a href="./dropdown pages/dropdown second/tab-15.html">Deep Dropdown 15</a></li>
+                </ul>
+              </li>
+
+
+
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+          <!-- translate for mobile -->
+          <li>
+            <div class="elfsight-app-d3a63166-be5f-414d-be8e-111b893d9461" data-elfsight-app-lazy></div>
+
+            <a href="https://elfsight.com/website-translator-widget/?utm_source=websites&amp;utm_medium=clients&amp;utm_content=website-translator&amp;utm_term=127.0.0.1&amp;utm_campaign=free-widget"
+              target="_blank" rel="noreferrer" style="display: none !important;">
+            </a>
+
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <nav id="navmenu-for-pc" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Our Stock</a></li>
+          <li><a href="partners.html"> Product</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a class="dropdown-style" onclick="toggleDropdownMenu()" style="color: black;"><span>Dropdown</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a></li>
+          <li><a href="contact.html"  class="active">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <div id="dropdown-pc" class="dropdown-pc">
+        <div onclick="toggleDropdownMenu()" class="drowpdown-close-icon"><i class="bi bi-x-lg "></i></div>
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-3 black-tab-item">
+              <!-- Vertical Tabs -->
+              <ul class="nav nav-tabs flex-column black-tab-list" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab"
+                    aria-controls="tab1" aria-selected="true">Partner <i
+                      class="bi bi-chevron-right toggle-dropdown"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2"
+                    aria-selected="false">Block <i class="bi bi-chevron-right toggle-dropdown"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3"
+                    aria-selected="false">Dropdown <i class="bi bi-chevron-right toggle-dropdown"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="tab4-tab" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4"
+                    aria-selected="false">Contact <i class="bi bi-chevron-right toggle-dropdown"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="tab5-tab" data-toggle="tab" href="#tab5" role="tab" aria-controls="tab5"
+                    aria-selected="false">Dropdown second <i class="bi bi-chevron-right toggle-dropdown"></i></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-9 white-list-tab-panel">
+              <!-- Tab Content -->
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                  <ul>
+                    <li><a href="./dropdown pages/partners/tab-1.html">Deep Dropdown 1</a></li>
+                    <li><a href="./dropdown pages/partners/tab-2.html">Deep Dropdown 2</a></li>
+                    <li><a href="./dropdown pages/partners/tab-3.html">Deep Dropdown 3</a></li>
+                    <li><a href="./dropdown pages/partners/tab-4.html">Deep Dropdown 4</a></li>
+                    <li><a href="./dropdown pages/partners/tab-5.html">Deep Dropdown 5</a></li>
+                    <li><a href="./dropdown pages/partners/tab-6.html">Deep Dropdown 6</a></li>
+                    <li><a href="./dropdown pages/partners/tab-7.html">Deep Dropdown 7</a></li>
+                    <li><a href="./dropdown pages/partners/tab-8.html">Deep Dropdown 8</a></li>
+                    <li><a href="./dropdown pages/partners/tab-9.html">Deep Dropdown 9</a></li>
+                    <li><a href="./dropdown pages/partners/tab-10.html">Deep Dropdown 10</a></li>
+                    <li><a href="./dropdown pages/partners/tab-11.html">Deep Dropdown 11</a></li>
+                    <li><a href="./dropdown pages/partners/tab-12.html">Deep Dropdown 12</a></li>
+                    <li><a href="./dropdown pages/partners/tab-13.html">Deep Dropdown 13</a></li>
+                    <li><a href="./dropdown pages/partners/tab-14.html">Deep Dropdown 14</a></li>
+                    <li><a href="./dropdown pages/partners/tab-15.html">Deep Dropdown 15</a></li>
+                    <li><a href="./dropdown pages/partners/tab-16.html">Deep Dropdown 16</a></li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                  <ul>
+                    <li><a href="./dropdown pages/block/tab-1.html">Deep Dropdown 1</a></li>
+                    <li><a href="./dropdown pages/block/tab-2.html">Deep Dropdown 2</a></li>
+                    <li><a href="./dropdown pages/block/tab-3.html">Deep Dropdown 3</a></li>
+                    <li><a href="./dropdown pages/block/tab-4.html">Deep Dropdown 4</a></li>
+                    <li><a href="./dropdown pages/block/tab-5.html">Deep Dropdown 5</a></li>
+                    <li><a href="./dropdown pages/block/tab-6.html">Deep Dropdown 6</a></li>
+                    <li><a href="./dropdown pages/block/tab-7.html">Deep Dropdown 7</a></li>
+                    <li><a href="./dropdown pages/block/tab-8.html">Deep Dropdown 8</a></li>
+                    <li><a href="./dropdown pages/block/tab-9.html">Deep Dropdown 9</a></li>
+                    <li><a href="./dropdown pages/block/tab-10.html">Deep Dropdown 10</a></li>
+                    <li><a href="./dropdown pages/block/tab-11.html">Deep Dropdown 11</a></li>
+                    <li><a href="./dropdown pages/block/tab-12.html">Deep Dropdown 12</a></li>
+                    <li><a href="./dropdown pages/block/tab-13.html">Deep Dropdown 13</a></li>
+                    <li><a href="./dropdown pages/block/tab-14.html">Deep Dropdown 14</a></li>
+                    <li><a href="./dropdown pages/block/tab-15.html">Deep Dropdown 15</a></li>
+                    <li><a href="./dropdown pages/block/tab-16.html">Deep Dropdown 16</a></li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                  <ul>
+                    <li><a href="./dropdown pages/dropdown/tab-1.html">Deep Dropdown 1</a></li>
+                    <li><a href="./dropdown pages/dropdown/tab-2.html">Deep Dropdown 2</a></li>
+                    <li><a href="./dropdown pages/dropdown/tab-3.html">Deep Dropdown 3</a></li>
+                    <li><a href="./dropdown pages/dropdown/tab-4.html">Deep Dropdown 4</a></li>
+                    <li><a href="./dropdown pages/dropdown/tab-5.html">Deep Dropdown 5</a></li>
+                    <li><a href="./dropdown pages/dropdown/tab-6.html">Deep Dropdown 6</a></li>
+                    <li><a href="./dropdown pages/dropdown/tab-7.html">Deep Dropdown 7</a></li>
+                    <li><a href="./dropdown pages/dropdown/tab-8.html">Deep Dropdown 8</a></li>
+                    <li><a href="./dropdown pages/dropdown/tab-9.html">Deep Dropdown 9</a></li>
+                    <li><a href="./dropdown pages/dropdown/tab-10.html">Deep Dropdown 10</a></li>
+                    <li><a href="./dropdown pages/dropdown/tab-11.html">Deep Dropdown 11</a></li>
+                    <li><a href="./dropdown pages/dropdown/tab-12.html">Deep Dropdown 12</a></li>
+                    <li><a href="./dropdown pages/dropdown/tab-13.html">Deep Dropdown 13</a></li>
+                    <li><a href="./dropdown pages/dropdown/tab-14.html">Deep Dropdown 14</a></li>
+                    <li><a href="./dropdown pages/dropdown/tab-15.html">Deep Dropdown 15</a></li>
+                    <li><a href="./dropdown pages/dropdown/tab-16.html">Deep Dropdown 16</a></li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+                  <ul>
+                    <li><a href="./dropdown pages/contact/tab-1.html">Deep Dropdown 1</a></li>
+                    <li><a href="./dropdown pages/contact/tab-2.html">Deep Dropdown 2</a></li>
+                    <li><a href="./dropdown pages/contact/tab-3.html">Deep Dropdown 3</a></li>
+                    <li><a href="./dropdown pages/contact/tab-4.html">Deep Dropdown 4</a></li>
+                    <li><a href="./dropdown pages/contact/tab-5.html">Deep Dropdown 5</a></li>
+                    <li><a href="./dropdown pages/contact/tab-6.html">Deep Dropdown 6</a></li>
+                    <li><a href="./dropdown pages/contact/tab-7.html">Deep Dropdown 7</a></li>
+                    <li><a href="./dropdown pages/contact/tab-8.html">Deep Dropdown 8</a></li>
+                    <li><a href="./dropdown pages/contact/tab-9.html">Deep Dropdown 9</a></li>
+                    <li><a href="./dropdown pages/contact/tab-10.html">Deep Dropdown 10</a></li>
+                    <li><a href="./dropdown pages/contact/tab-11.html">Deep Dropdown 11</a></li>
+                    <li><a href="./dropdown pages/contact/tab-12.html">Deep Dropdown 12</a></li>
+                    <li><a href="./dropdown pages/contact/tab-13.html">Deep Dropdown 13</a></li>
+                    <li><a href="./dropdown pages/contact/tab-14.html">Deep Dropdown 14</a></li>
+                    <li><a href="./dropdown pages/contact/tab-15.html">Deep Dropdown 15</a></li>
+                    <li><a href="./dropdown pages/contact/tab-16.html">Deep Dropdown 16</a></li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
+                  <ul>
+                    <li><a href="./dropdown pages/dropdown second/tab-1.html">Deep Dropdown 1</a></li>
+                    <li><a href="./dropdown pages/dropdown second/tab-2.html">Deep Dropdown 2</a></li>
+                    <li><a href="./dropdown pages/dropdown second/tab-3.html">Deep Dropdown 3</a></li>
+                    <li><a href="./dropdown pages/dropdown second/tab-4.html">Deep Dropdown 4</a></li>
+                    <li><a href="./dropdown pages/dropdown second/tab-5.html">Deep Dropdown 5</a></li>
+                    <li><a href="./dropdown pages/dropdown second/tab-6.html">Deep Dropdown 6</a></li>
+                    <li><a href="./dropdown pages/dropdown second/tab-7.html">Deep Dropdown 7</a></li>
+                    <li><a href="./dropdown pages/dropdown second/tab-8.html">Deep Dropdown 8</a></li>
+                    <li><a href="./dropdown pages/dropdown second/tab-9.html">Deep Dropdown 9</a></li>
+                    <li><a href="./dropdown pages/dropdown second/tab-10.html">Deep Dropdown 10</a></li>
+                    <li><a href="./dropdown pages/dropdown second/tab-11.html">Deep Dropdown 11</a></li>
+                    <li><a href="./dropdown pages/dropdown second/tab-12.html">Deep Dropdown 12</a></li>
+                    <li><a href="./dropdown pages/dropdown second/tab-13.html">Deep Dropdown 13</a></li>
+                    <li><a href="./dropdown pages/dropdown second/tab-14.html">Deep Dropdown 14</a></li>
+                    <li><a href="./dropdown pages/dropdown second/tab-15.html">Deep Dropdown 15</a></li>
+                    <li><a href="./dropdown pages/dropdown second/tab-16.html">Deep Dropdown 16</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+
+    <section id="contact" class="contact section ">
+      <section class="about-section-up headersectionimage5">
+        <div class="about-header">
+          <ul class="bh-breadcrumb__list">
+            <!-- Home -->
+            <li class="bh-breadcrumb__item">
+                <span class="bh-breadcrumb__item-text">
+                    <a href="./index.html"> Home </a>
+                </span>
+            </li>
+        
+            <!-- Breadcrumb Arrow -->
+            <li class="bh-breadcrumb__item">
+                <i class="fa-solid fa-chevron-right"></i>
+            </li>
+        
+            <!-- Contact Us -->
+            <li class="bh-breadcrumb__item">
+                <a href="./contact.html" class="bh-breadcrumb__item-text">Contact Us</a>
+            </li>
+        </ul>
+          <h1>How can we help you?</h1>
+          <div class="about_description_up">
+            <p>
+              Let us know how we can help you with your existing or future projects, and one of our sales or support representatives will contact you shortly.
+    
+    
+            </p>
+          </div>
+        </div>
+      </section>  
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+   
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <p>AZURE BUSINESS CENTER
+              <br>
+                Ave Nobel 15,Azerbaijan Baku, AZ1025
+                <br>
+                Floor 19, Office 130</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone"></i>
+              <h3>Call Us</h3>
+              <p> +99412 4886807 <br> +99451 2256160 <br> +99451 2256169 </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>info@blackwell.az <br>  <br> export@blackwell.az</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row gy-4 mt-1">
+          <div class="col-lg-6" >
+            <div class="responsive-map">
+              <iframe src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=BlackWell LLC&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+
+
+
+        </div>
+                  <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="text-secondary py-5 footermain" role="contentinfo">
+    <div class="container">
+  
+      <!-- Üst Satır: Logo + 3 Kolon -->
+      <div class="row mb-4">
+        
+        <!-- Logo -->
+        <div class="col-md-3 mb-4">
+          <a href="/" class="text-white fw-bold fs-5 text-decoration-none d-inline-block mb-3"
+            aria-label="BlackWell Home">
+            BlackWell
+          </a>
+          <address class="text-secondary small mb-0">
+            AZURE BUSINESS CENTER<br>
+            Ave Nobel 15, Azerbaijan Baku, AZ1025<br>
+            Floor 19, Office 130
+          </address>
+        </div>
+        <!-- More BlackWell -->
+        <div class="col-md-3 mb-4">
+          <h6 class="text-white mb-3">More BlackWell</h6>
+          <ul class="list-unstyled">
+            <li><a href="/index.html" class="text-decoration-none text-secondary">Home</a></li>
+            <li><a href="/about.html" class="text-decoration-none text-secondary">About</a></li>
+            <li><a href="/services.html" class="text-decoration-none text-secondary">Our Stock</a></li>
+            <li><a href="/partners.html" class="text-decoration-none text-secondary">Product</a></li>
+            <li><a href="/blog.html" class="text-decoration-none text-secondary">Blog</a></li>
+          </ul>
+        </div>
+  
+        <!-- Helpful Links -->
+        <div class="col-md-3 mb-4">
+          <h6 class="text-white mb-3">Helpful Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="/contact.html" class="text-decoration-none text-secondary">Contact</a></li>
+            <li><a href="/privacy" class="text-decoration-none text-secondary">Privacy Notice</a></li>
+            <li><a href="/e-waste" class="text-decoration-none text-secondary">E-Waste Info</a></li>
+            <li><a href="/terms" class="text-decoration-none text-secondary">Terms of Service</a></li>
+          </ul>
+        </div>
+  
+        <!-- Social -->
+        <div class="col-md-3 mb-4">
+          <h6 class="text-white mb-3">Social</h6>
+          <div class="d-flex gap-2">
+            <a href="#" class="border border-secondary rounded-circle text-secondary text-center" style="width: 32px; height: 32px; line-height: 32px;"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="border border-secondary rounded-circle text-secondary text-center" style="width: 32px; height: 32px; line-height: 32px;"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="border border-secondary rounded-circle text-secondary text-center" style="width: 32px; height: 32px; line-height: 32px;"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="border border-secondary rounded-circle text-secondary text-center" style="width: 32px; height: 32px; line-height: 32px;"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#" class="border border-secondary rounded-circle text-secondary text-center" style="width: 32px; height: 32px; line-height: 32px;"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+  
+      </div>
+  
+      <!-- Alt Satır -->
+      <hr class="border-secondary">
+  
+      <div class="row text-center">
+        <div class="col-12 mb-2">
+          <small>© 2025 BlackWell Company</small>
+        </div>
+        <div class="col-12">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="/cookies" class="text-secondary text-decoration-none">Cookies</a></li>
+            <li class="list-inline-item"><a href="/terms" class="text-secondary text-decoration-none">Terms</a></li>
+            <li class="list-inline-item"><a href="/conflict-minerals" class="text-secondary text-decoration-none">Conflict Minerals</a></li>
+            <li class="list-inline-item"><a href="/e-waste" class="text-secondary text-decoration-none">E-Waste</a></li>
+            <li class="list-inline-item"><a href="/privacy" class="text-secondary text-decoration-none">Privacy Notice</a></li>
+            <li class="list-inline-item"><a href="/preferences" class="text-secondary text-decoration-none" target="_blank">Preferences ↗</a></li>
+          </ul>
+        </div>
+      </div>
+  
+    </div>
+  </footer>
+  
+
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <!-- <div id="preloader"></div> -->
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="/assets/js/Contactme.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="assets/js/main.js"></script>
+  
+<!-- Elfsight Website Translator | Untitled Website Translator -->
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+
+</body>
+
+</html>

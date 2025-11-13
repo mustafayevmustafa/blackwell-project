@@ -1,0 +1,90 @@
+    [
+        {
+            "image": "https://www.mjwilsongroup.co.uk/dynamic/images/44%20-%20AT6.png",
+            "title": "AquaTrans AT600 - Accuracy",
+            "subtitle": "Flow Transmitter",
+            "feature": "±1% Accuracy",
+            "details": "±1% to ±2% Reading Accuracy, Clamp-on ultrasonic measurement, Ideal for Oil & Gas water systems",
+            "modalId": "productModal1"
+        },
+        {
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXk_Bhn1f9rAAeKEt5W1qK9FF8wV-xi5jUXA&s",
+            "title": "DigitalFlow XGF868i",
+            "subtitle": "Non-intrusive Design",
+            "feature": "Modbus, HART Ready",
+            "details": "Supports HART and Modbus, Velocity, Volumetric, and Totalized Output, Extremely easy setup",
+            "modalId": "productModal2"
+        },
+        {
+            "image": "https://www.instrumart.com/assets/PT878GC1-360.jpg",
+            "title": "TransPort PT878GC",
+            "subtitle": "Pipe Versatile",
+            "feature": "Works on Lined Pipes",
+            "details": "Works on wide pipe range, Supports lined and unlined pipes, Durable for industrial environments",
+            "modalId": "productModal3"
+        },
+        {
+            "image": "https://www.instrumart.com/assets/PT900-360.jpg?width=660&height=495&scale=upscalecanvas&bgcolor=fff",
+            "title": "TransPort PT900",
+            "subtitle": "Oil & Gas Use",
+            "feature": "Water & Chemical Flow",
+            "details": "Designed for water injection & cooling, Handles sea water and chemicals, Permanent solid couplant available",
+            "modalId": "productModal4"
+        },
+        {
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuCv0yriCorJVIOOsdKLLV2SyjFk7UvoVq6w&s",
+            "title": "AquaTrans AT600 - Oil & Gas Use",
+            "subtitle": "Oil & Gas Use",
+            "feature": "Water & Chemical Flow",
+            "details": "Designed for water injection & cooling, Handles sea water and chemicals, Permanent solid couplant available",
+            "modalId": "productModal4"
+        },
+        {
+            "image": "https://www.instrumart.com/assets/XMT868i-360.jpg?width=660&height=495&scale=upscalecanvas&bgcolor=fff",
+            "title": "Panametrics XMT868i",
+            "subtitle": "Oil & Gas Use",
+            "feature": "Water & Chemical Flow",
+            "details": "Designed for water injection & cooling, Handles sea water and chemicals, Permanent solid couplant available",
+            "modalId": "productModal4"
+        },
+        {
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThHJgoDvoRlKhR_MMqkLDCbtbSYErbqm9A4g&s",
+            "title": "AquaTrans AT600 - Oil & Gas Use",
+            "subtitle": "Oil & Gas Use",
+            "feature": "Water & Chemical Flow",
+            "details": "Designed for water injection & cooling, Handles sea water and chemicals, Permanent solid couplant available",
+            "modalId": "productModal4"
+        },
+        {
+            "image": "https://www.instrumart.com/assets/O2X11-200.jpg?width=660&height=495&scale=upscalecanvas&bgcolor=fff",
+            "title": "AquaTrans AT600 - Oil & Gas Use",
+            "subtitle": "Oil & Gas Use",
+            "feature": "Water & Chemical Flow",
+            "details": "Designed for water injection & cooling, Handles sea water and chemicals, Permanent solid couplant available",
+            "modalId": "productModal4"
+        },
+        {
+            "image": "https://www.instrumart.com/assets/Panametrics_XMTC.jpg?width=660&height=495&scale=upscalecanvas&bgcolor=fff",
+            "title": "AquaTrans AT600 - Oil & Gas Use",
+            "subtitle": "Oil & Gas Use",
+            "feature": "Water & Chemical Flow",
+            "details": "Designed for water injection & cooling, Handles sea water and chemicals, Permanent solid couplant available",
+            "modalId": "productModal4"
+        },
+        {
+            "image": "https://s7d9.scene7.com/is/image/minesafetyappliances/Z-GardDSSensor_000070000800001102?$Home%20Market%20Card$",
+            "title": "AquaTrans AT600 - Oil & Gas Use",
+            "subtitle": "Oil & Gas Use",
+            "feature": "Water & Chemical Flow",
+            "details": "Designed for water injection & cooling, Handles sea water and chemicals, Permanent solid couplant available",
+            "modalId": "productModal4"
+        },
+        {
+            "image": "https://www.instrumart.com/assets/XMT1000-2020.jpg?width=660&height=495&scale=upscalecanvas&bgcolor=fff",
+            "title": "AquaTrans AT600 - Oil & Gas Use",
+            "subtitle": "Oil & Gas Use",
+            "feature": "Water & Chemical Flow",
+            "details": "Designed for water injection & cooling, Handles sea water and chemicals, Permanent solid couplant available",
+            "modalId": "productModal4"
+        }
+    ]

@@ -1,0 +1,49 @@
+/* Yeni benzersiz kart sınıfı */
+.panametric-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+  }
+  
+  .panametric-card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  .panametric-card-body {
+    padding: 15px;
+  }
+  
+  .product-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .product-subtitle {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .product-feature {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  /* Modal içerikleri için özel stil */
+  .modal-content {
+    border-radius: 8px;
+  }
+  
+  .modal-body {
+    text-align: center;
+  }
+  
+  #productCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  

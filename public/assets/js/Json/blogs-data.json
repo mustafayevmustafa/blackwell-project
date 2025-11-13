@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "type": "video",
+    "thumbnail": "assets/img/blog/video-thumbnail.jpg",
+    "videoSrc": "assets/videos/Blackwellvideos/BlackWell.MP4",
+    "title": "BlackWell at Baku Energy Week 2024: Panametrics (Baker Hughes) Showcase and Carbon Reduction Dialogue",
+    "meta": {
+      "author": "John Doe",
+      "date": "2022-01-01",
+      "comments": 12
+    },
+    "content": [
+      "In 2024, BlackWell proudly participated in Baku Energy Week, one of the Caspian region’s most influential energy events, bringing together key players from the oil, gas, renewable energy, and technology sectors.",
+      "As part of its strong regional presence, BlackWell showcased its diverse industrial portfolio, including advanced measurement and instrumentation solutions from Panametrics, a Baker Hughes brand. BlackWell is the official distributor of Panametrics in six countries across the Caspian and Central Asia regions, including Azerbaijan, Georgia, Uzbekistan, Turkmenistan, Kyrgyzstan, and Tajikistan. Alongside Panametrics, the company also presented products and solutions from nearly 15 other leading international technology partners, reinforcing its position as a key technical supplier in the region.",
+      "A notable highlight of the event was the joint panel discussion co-hosted by BlackWell and Baker Hughes, where industry leaders came together to address the urgent need for carbon emission reduction. The session focused on the innovative Flare.IQ™ technology, which enables energy operators to optimize flare performance and reduce carbon emissions by up to 89%. This technology, developed by Baker Hughes, aligns with global sustainability goals and provides real-time control and efficiency for flare systems across various industrial applications.",
+      "The event served as a powerful platform for BlackWell to demonstrate its technical capabilities, strengthen relationships with existing and potential clients, and share its commitment to environmental responsibility and sustainable industrial transformation.",
+      {
+        "heading": "BlackWell Honored at “Wintensity 2025” in Florence: Best YoY Growth Among Panametrics Distributors",
+        "text": "In early 2025, BlackWell participated in the “Wintensity – Europe and Caspian Sea Regions” distributor conference, hosted in Florence, Italy by Panametrics (Baker Hughes).\n\nThis prestigious event brought together leading Panametrics distributors from across Europe and the Caspian region to exchange insights, explore innovations, and review the latest technological advancements in flow, moisture, and gas measurement solutions.\n\nDuring the conference, BlackWell was recognized with a significant award — “Best Year-over-Year Growth”, highlighting its outstanding performance and strategic expansion in the region throughout 2024. Competing among several distinguished partners, BlackWell’s commitment to excellence, customer satisfaction, and strong sales momentum earned it this accolade.\n\nThis recognition reaffirms BlackWell’s position as a key regional distributor of Panametrics and its dedication to delivering world-class technologies and services to its clients across Azerbaijan, Georgia, Uzbekistan, Turkmenistan, Kyrgyzstan, and Tajikistan.\n\nBlackWell remains committed to growing its regional footprint and continuing to lead with innovative, sustainable, and value-driven solutions in the oil & gas, energy, and industrial sectors."
+      },
+      "The event served as a powerful platform for BlackWell to demonstrate its technical capabilities..."
+    ],
+    "image": "/assets/img/BlogImages/Blackwellimage.JPG",
+    "category": "Energy"
+  },
+  
+  {
+    "id": 2,
+    "type": "video",
+    "thumbnail": "assets/img/blog/video-thumbnail.jpg",
+    "videoSrc": "assets/videos/Blackwellvideos/BlackWell.MP4",
+    "title": "BlackWell at Baku Energy Week 2024: Panametrics (Baker Hughes) Showcase and Carbon Reduction Dialogue",
+    "meta": {
+      "author": "John Doe",
+      "date": "2022-01-01",
+      "comments": 12
+    },
+    "content": [
+      "In 2024, BlackWell proudly participated in Baku Energy Week, one of the Caspian region’s most influential energy events, bringing together key players from the oil, gas, renewable energy, and technology sectors.",
+      "As part of its strong regional presence, BlackWell showcased its diverse industrial portfolio, including advanced measurement and instrumentation solutions from Panametrics, a Baker Hughes brand...",
+      {
+        "heading": "Carbon Emission Reduction Technology",
+        "text": "A notable highlight of the event was the joint panel discussion co-hosted by BlackWell and Baker Hughes..."
+      },
+      "The event served as a powerful platform for BlackWell to demonstrate its technical capabilities..."
+    ],
+    "image": "/assets/img/BlogImages/Blackwellimage.JPG",
+    "category": "Energy"
+  },
+  {
+    "id": 3,
+    "type": "sidebar",
+    "categories": [
+      { "name": "General", "count": 25 },
+      { "name": "Lifestyle", "count": 12 },
+      { "name": "Travel", "count": 5 },
+      { "name": "Design", "count": 22 },
+      { "name": "Creative", "count": 8 },
+      { "name": "Education", "count": 14 }
+    ],
+    "recentPosts": [
+      {
+        "id": 1,
+        "title": "Nihil blanditiis at in nihil autem",
+        "image": "assets/img/blog/blog-recent-1.jpg",
+        "date": "2020-01-01",
+        "category": "Lifestyle"
+      },
+      {
+        "id": 2,
+        "title": "Quidem autem et impedit",
+        "image": "assets/img/blog/blog-recent-2.jpg",
+        "date": "2020-01-01",
+        "category": "Design"
+      }
+    ]
+  }
+]

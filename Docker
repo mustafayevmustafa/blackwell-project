@@ -1,0 +1,128 @@
+# Docker ilə Laravel Qurulması
+
+Bu layihə Docker istifadə edərək asanlıqla qaldırıla bilər.
+
+## Tələblər
+
+- Docker
+- Docker Compose
+
+## Quraşdırma
+
+### 1. Asan başlanğıc (Tövsiyə edilir)
+
+Sadəcə aşağıdakı əmri icra edin:
+
+```bash
+./docker-start.sh
+```
+
+Bu script avtomatik olaraq:
+- Konteynerləri qaldıracaq
+- Composer paketlərini yükləyəcək
+- Application key yaradacaq
+- Migrasiyaları çalışdıracaq
+- Cache-ləri təmizləyəcək
+
+### 2. Manuel başlanğıc
+
+```bash
+# Konteynerləri qaldırın
+docker-compose up -d --build
+
+# Composer paketlərini yükləyin
+docker-compose exec app composer install
+
+# .env faylını kopyalayın (lazım olsa)
+cp .env.example .env
+
+# Application key yaradın
+docker-compose exec app php artisan key:generate
+
+# Migrasiyaları çalışdırın
+docker-compose exec app php artisan migrate
+
+# Cache-ləri təmizləyin
+docker-compose exec app php artisan config:cache
+docker-compose exec app php artisan route:cache
+```
+
+## İstifadə
+
+### URL-lər
+
+- **Application**: http://localhost:8080
+- **MySQL**: localhost:3306
+- **Redis**: localhost:6379
+
+### Database məlumatları
+
+- **Database**: laravel
+- **Username**: laravel
+- **Password**: laravel
+- **Root Password**: root
+
+### Faydalı əmrlər
+
+```bash
+# Konteynerləri dayandırın
+./docker-stop.sh
+# və ya
+docker-compose down
+
+# Konteynerləri yenidən başladın
+docker-compose restart
+
+# Log-lara baxın
+docker-compose logs -f
+
+# Konteynerin içinə daxil olun
+docker-compose exec app bash
+
+# Artisan əmrləri
+docker-compose exec app php artisan [command]
+
+# Composer əmrləri
+docker-compose exec app composer [command]
+
+# NPM əmrləri (əgər lazımdırsa)
+docker-compose exec app npm [command]
+```
+
+## Servislər
+
+Layihə aşağıdakı servislərdən ibarətdir:
+
+1. **app** - PHP 8.2 FPM (Laravel tətbiqi)
+2. **nginx** - Nginx web server
+3. **db** - MySQL 8.0
+4. **redis** - Redis cache
+
+## Problemlər
+
+### Port artıq istifadə olunursa
+
+Əgər 8080 portu məşğuldursa, `docker-compose.yml` faylında nginx servisinin portunu dəyişdirin:
+
+```yaml
+nginx:
+  ports:
+    - "8081:80"  # 8081 və ya başqa port
+```
+
+### Permission problemləri
+
+```bash
+docker-compose exec app chown -R www-data:www-data /var/www/html/storage
+docker-compose exec app chown -R www-data:www-data /var/www/html/bootstrap/cache
+docker-compose exec app chmod -R 775 /var/www/html/storage
+docker-compose exec app chmod -R 775 /var/www/html/bootstrap/cache
+```
+
+### Konteynerləri sıfırdan quraşdırın
+
+```bash
+docker-compose down -v
+docker-compose up -d --build
+./docker-start.sh
+```

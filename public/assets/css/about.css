@@ -1,0 +1,488 @@
+/* About Us Slide */
+.page_intro {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.page_intro_container {
+
+    background-color: #27272c;
+    padding-bottom: 100px;
+    padding-top: 120px;
+    position: relative;
+    width: 100%;
+
+}
+
+
+.page_intro_background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Dark overlay for better contrast */
+    backdrop-filter: blur(8px);
+    /* Increased blur for a smoother look */
+}
+
+.page_intro_container_iframe {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.intro_video {
+    width: 80%;
+    /* Set width to 80% of the container */
+    height: 600px;
+    /* Set a fixed height (adjust as needed) */
+    object-fit: cover;
+    /* Ensure the video covers the area */
+    /* Optional: rounded corners for a softer look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    /* Optional: subtle shadow around video */
+}
+
+.video-control-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 20px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.video-control-btn:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.video-overlay-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    /* Kullanıcı tıklayamasın */
+}
+
+/* Ortada Görünecek Play/Pause İkonu */
+.video-overlay-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100px;
+    /* Sabit genişlik */
+    height: 100px;
+    /* Sabit yükseklik */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 1;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    /* Kullanıcı tıklayamasın */
+}
+
+
+/* Sağ Alt Köşedeki Play/Stop Butonları */
+.video-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.video-controls button {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.3s;
+}
+
+.video-controls button:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+/* 
+.uni_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    margin-top: 60px;
+
+    min-height: 430px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.uni_header .bg {
+    background-color: rgba(0, 0, 0, 0.4);
+    filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+
+.uni_header .bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.uni_header .bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.uni_header section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.uni_header h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+ */
+
+
+.page_intro_text {
+    padding-left: 150px;
+    padding-bottom: 30px;
+}
+
+.page_intro_text h1 {
+    font-family: "Kumbh Sans", serif;
+    font-optical-sizing: auto;
+    line-height: 1.6;
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0;
+    flex: 1 0 auto;
+}
+
+
+.swiper-slide-visible{
+    margin-right: 0 !important;
+}
+/* Swipper About */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-wrapper {
+    height: 400px;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.mySwiper2 {
+    height: 40%;
+    width: 40%;
+}
+
+.mySwiper {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+.mySwiper .swiper-slide {
+    width: 25%;
+    height: 80px;
+    opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-container {
+    width: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+}
+
+.testimonial-wrapper {
+    display: flex;
+
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial {
+    display: flex;
+    min-width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.stars {
+    color: gold;
+    font-size: 18px;
+}
+
+.testimonialbuttons {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.testimonialbuttons button {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.testimonialbuttons button:hover {
+    background: #444;
+}
+
+.testimonial-content h4 {
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.testiomonial_all {
+    margin-right: 100px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    bottom: 20px;
+    top: auto;
+    width: 130px;
+    /* Buton boyutunu daha uygun yap */
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    /* Butonları üst katmana al */
+    pointer-events: auto;
+    /* Tıklanabilir yap */
+}
+
+/* Sol butonu sola al */
+.swiper-button-prev {
+    left: -5px;
+}
+
+/* Sağ butonu sağa al */
+.swiper-button-next {
+    right: -5px;
+}
+
+
+
+@media (max-width: 768px) {
+    .video-controls button {
+        padding: 10px;
+    }
+
+    .page_intro_text h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.875rem;
+        font-weight: 600;
+        line-height: 1.33;
+        letter-spacing: 0;
+        ;
+        position: relative;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .page_intro_text {
+        width: 100% !important;
+        text-align: left;
+        padding: 5px;
+        padding-bottom: 30px;
+    }
+
+    .intro_video {
+        border-radius: 10px;
+        padding: 10px;
+        width: 100%;
+        height: 300px;
+    }
+
+    .uni_header h1 {
+        font-size: 2rem;
+    }
+
+    .uni_header {
+        margin-top: 50px;
+        min-height: 300px;
+        /* Reduce min-height for mobile */
+    }
+
+    .uni_header h1 {
+        font-size: 2rem;
+        /* Smaller font size for mobile */
+    }
+
+    .uni_header .bg {
+        filter: blur(2px);
+        /* Lessen the blur for better performance on mobile */
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+        /* Küçük resimleri gizle */
+    }
+
+    /* Sağ ve sol butonları mobilde görünür yap */
+
+
+    .video-controls {
+        top: 260px;
+        right: 20px !important;
+    }
+
+    .mySwiper2 {
+        width: 100% !important;
+    }
+
+    .mySwiper {
+        display: none !important;
+    }
+
+    .page_intro_text h1 .mobile-break {
+        display: block;
+    }
+}
+
+.about-head-text h1::before {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 3px;
+    background-color: #020202;
+    position: absolute;
+    left: 2%;
+    top: 60px;
+}
+/* Başlangıçta tüm bölümler gizli ve aşağı kaymış */
+.about.section, 
+.page_intro_container, 
+.testimonials {
+    opacity: 0;
+    transform: translateY(50px); /* Aşağıdan yukarıya kaydırma */
+    transition: transform 1s ease-out, opacity 1s ease-out; /* Animasyon süresi */
+}
+
+/* Görünür hale geldiğinde */
+.about.section.visible, 
+.page_intro_container.visible, 
+.testimonials.visible {
+    opacity: 1;
+    transform: translateY(0); /* Normal konuma gelme */
+}

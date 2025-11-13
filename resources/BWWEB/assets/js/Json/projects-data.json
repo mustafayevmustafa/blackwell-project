@@ -1,0 +1,157 @@
+{
+  "projects": [
+    {
+      "title": "HYDRAULICS",
+      "category": "filter-process",
+      "image": "assets/img/Productimages/15.png",
+      "description": "Process Analyzers0",
+      "detail_link": "assets/img/Productimages/15.png",
+      "preview_link": "assets/img/Productimages/15.png"
+    },
+    {
+      "title": "SEALING & GASKETS",
+      "category": "filter-process",
+      "image": "assets/img/Productimages/11.png",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "assets/img/Productimages/11.png",
+      "preview_link": "assets/img/Productimages/11.png"
+    },
+    {
+      "title": "PNEUMATICS",
+      "category": "filter-process",
+      "image": "assets/img/Productimages/12.png",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "assets/img/Productimages/12.png",
+      "preview_link": "assets/img/Productimages/12.png"
+    },
+    {
+      "title": "FILTRATION SOLUTIONS",
+      "category": "filter-process",
+      "image": "assets/img/Productimages/13.png",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "assets/img/Productimages/13.png",
+      "preview_link": "assets/img/Productimages/13.png"
+    },
+    {
+      "title": "FLUID & GASHANDLING",
+      "category": "filter-process",
+      "image": "assets/img/Productimages/14.png",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "assets/img/Productimages/14.png",
+      "preview_link": "assets/img/Productimages/14.png"
+    },
+    {
+      "title": "WELDING &HEAT TREATMENT",
+      "category": "filter-process",
+      "image": "assets/img/Productimages/24.png",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "assets/img/Productimages/24.png",
+      "preview_link": "assets/img/Productimages/24.png"
+    },
+    {
+      "title": "PROCESS INSTRUMENTATION",
+      "category": "filter-process",
+      "image": "assets/img/Productimages/16.png",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "assets/img/Productimages/16.png",
+      "preview_link": "assets/img/Productimages/16.png"
+    },
+    {
+      "title": "INDUSTRIAL TOOLS& EQUIPMENT",
+      "category": "filter-process",
+      "image": "assets/img/Productimages/18.png",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "assets/img/Productimages/18.png",
+      "preview_link": "assets/img/Productimages/18.png"
+    },
+    {
+      "title": "PIPING SOLUTIONS",
+      "category": "filter-process",
+      "image": "assets/img/Productimages/20.jpg",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "assets/img/Productimages/20.jpg",
+      "preview_link": "assets/img/Productimages/20.jpg"
+    },
+    {
+      "title": "ELECTRICAL",
+      "category": "filter-process",
+      "image": "assets/img/Productimages/22.png",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "assets/img/Productimages/22.png",
+      "preview_link": "assets/img/Productimages/22.png"
+    },
+    {
+      "title": "DRILLING DOWNHOLE TOOLS",
+      "category": "filter-process",
+      "image": "assets/img/Productimages/25.png",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "assets/img/Productimages/25.png",
+      "preview_link": "assets/img/Productimages/25.png"
+    },
+    {
+      "title": "LIFTING & RIGGING",
+      "category": "filter-process",
+      "image": "assets/img/Productimages/17.png",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "assets/img/Productimages/17.png",
+      "preview_link": "assets/img/Productimages/17.png"
+    },
+    {
+      "title": "MARINE INDUSTRIAL EQUIPMENT",
+      "category": "filter-process",
+      "image": "assets/img/Productimages/25.png",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "assets/img/Productimages/25.png",
+      "preview_link": "assets/img/Productimages/25.png"
+    },
+    {
+      "title": "INDUSTRIAL HEATERS & SYSTEMS",
+      "category": "filter-process",
+      "image": "assets/img/Productimages/21.png",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "assets/img/Productimages/21.png",
+      "preview_link": "assets/img/Productimages/21.png"
+    },
+    {
+      "title": "TECHNICAL GASES",
+      "category": "filter-process",
+      "image": "assets/img/Productimages/23.png",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "assets/img/Productimages/23.png",
+      "preview_link": "assets/img/Productimages/23.png"
+    },
+    {
+      "title": "SORBENTS",
+      "category": "filter-chemical",
+      "image": "https://static.siberianhealth.com/public/projects/shopen/images/40/_resize/400237_2025_664ad0dc_fit_300_300.jpg",
+      "description": "A coolant (also called an antifreeze) is a special fluid that runs through your engine to keep it within its correct operating temperature range. It is made from either ethylene glycol or propylene, water, some protection additives and is usually green, blue or even pink in colour.",
+      "detail_link": "project-details.html",
+      "preview_link": "assets/img/chemical_product_preview.jpg"
+    },
+    
+    {
+      "title": "CATALYSTS",
+      "category": "filter-chemical",
+      "image": "https://www.zeolyst.com/our-products/specialty-catalysts/_jcr_content/root/metadata.shellimg.jpeg/1692688104208/our-products-specialty-catalyst.jpeg",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "project-details.html",
+      "preview_link": "assets/img/chemical_product_preview.jpg"
+    },
+    {
+      "title": "CHEMICAL PRODUCTS",
+      "category": "filter-chemical",
+      "image": "assets/img/Productimages/chemical_product.png",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "project-details.html",
+      "preview_link": "assets/img/chemical_product_preview.jpg"
+    },
+    {
+      "title": "CHEMICAL PRODUCTS",
+      "category": "filter-chemical",
+      "image": "assets/img/Productimages/chemical_product.png",
+      "description": "Lorem ipsum, dolor sit amet consectetur",
+      "detail_link": "project-details.html",
+      "preview_link": "assets/img/chemical_product_preview.jpg"
+    }
+  ]
+}

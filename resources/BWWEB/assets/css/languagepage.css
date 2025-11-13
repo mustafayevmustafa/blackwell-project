@@ -1,0 +1,312 @@
+#globeIcon {
+    cursor: pointer;
+    color: white;
+    align-items: center;
+    display: flex;
+    
+}
+.dEEZaB{
+    display: block !important;
+}
+.gddojS {
+    display: block !important;
+}
+
+.EmbedRoot__Root-sc-5f47a35b-0.dqVbLE.es-embed-root.eapps-website-translator-65df015d-932c-4865-ba04-49e0814e2ae0-custom-css-root.embed__StyledEmbedRoot-sc-ffe615cb-0.gddojS {
+    padding-top: 20px !important;
+    
+}
+.keatQC{
+    border: 0 !important;
+}
+.EmbedRoot__Root-sc-5f47a35b-0,
+.dqVbLE,
+.es-embed-root,
+.eapps-website-translator-65df015d-932c-4865-ba04-49e0814e2ae0-custom-css-root,
+.embed__StyledEmbedRoot-sc-ffe615cb-0,
+.gddojS {
+    padding-top:30px !important;
+}
+
+.btpaZN {
+    background-color: unset !important;
+    padding: 12px 12px !important;
+    background-color: none !important;
+}
+.iyUlFU{
+
+    padding: 0 !important;
+}
+
+.eeQNzq{
+    padding: 0 !important;
+}
+@media (max-width: 768px) {
+    .eeQNzq{
+        padding:20px !important;
+    }
+    .container__Wrapper-sc-da66369c-0.bfZMAA{
+        color: black !important;
+    }
+    .background__Container-sc-8cd96932-0.eeQNzq{
+        background-color: white !important;
+        color: black !important;
+    }
+    .EmbedRoot__Root-sc-5f47a35b-0,
+.dqVbLE,
+.es-embed-root,
+.eapps-website-translator-65df015d-932c-4865-ba04-49e0814e2ae0-custom-css-root,
+.embed__StyledEmbedRoot-sc-ffe615cb-0,
+.gddojS {
+    padding-top: 0px !important;
+}
+    .dRBtfS{
+        width: 100% !important;
+    }
+    .OLFef{
+        box-shadow: none !important;
+
+        width: 100% !important;
+    }
+    .iyUlFU{
+        background-color: rgb(83, 83, 83) !important;
+        width: 100% !important;
+    }
+    .Popout__PopoutContent-sc-713802dc-0.cQbgfq {
+        width: 100% !important;
+    }
+
+    .Popout__PopoutContent-sc-713802dc-0 {
+        transform: translate(10px, 50px) !important;
+    }
+
+    .keatQC{
+        border: 0 !important;
+        margin-top: 0 !important;
+    }
+    .btpaZN {
+        position: relative;
+        /* Parent olarak konumlandır */
+        font-weight: 700;
+        background-color: white !important;
+        padding: 0 !important;
+        color: black !important;
+        display: block !important;
+    }
+
+    .container__Wrapper-sc-fe63e67a-0 {
+        color: black !important;
+    }
+
+    .cCCzCX {
+        position: unset !important;
+    }
+    .background__Container-sc-2fa24ccf-0{
+        background-color: white !important;
+    }.dKwjEz{
+        color: black !important;
+    }
+    .iYOtTc svg{
+        fill:  black !important;
+    }
+}
+
+.eSmCQL {
+    display: inline-flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px 8px !important;
+    padding: 6px 10px !important;
+    /* padding değerini azalttım */
+    background-color: rgb(17, 17, 17) !important;
+    border-radius: 24px !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px 0px !important;
+}
+
+.VIpgJd-yAWNEb-VIpgJd-fmcmS-sn54Q {
+    all: unset !important;
+    /* This resets all styles applied to this element */
+    background-color: none !important;
+    /* You can still explicitly set this if needed */
+    box-shadow: none !important;
+    /* Remove box-shadow if needed */
+}
+
+a[href*="elfsight.com"] {
+    display: none !important;
+}
+
+#google_translate_element {
+    display: none;
+}
+
+.EmbedRoot__Root-sc-5f47a35b-0 a {
+    display: none !important;
+}
+
+a[href*="elfsight.com"] {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    z-index: 0;
+    height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+}
+
+.flagContainer {
+
+    display: none;
+    line-height: 30px;
+    gap: 15px;
+    width: 10%;
+    margin-top: 20px;
+    top: 10%;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flag_link {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+}
+
+.flag_link img {
+    width: 24px;
+    height: 16px;
+    margin-right: 8px;
+    transition: transform 0.2s ease;
+}
+
+.flag_link:hover {
+    text-decoration: underline;
+}
+
+.flag_link:hover img {
+    transform: scale(1.1);
+}
+
+
+#goog-gt-tt {
+    visibility: hidden !important;
+}
+
+.languagespage {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.skiptranslate {
+    display: none;
+}
+
+.language-display {
+    display: flex;
+
+    align-items: center;
+}
+
+.language-display img {
+    width: 24px;
+    height: 16px;
+    margin-left: 8px;
+}
+
+.VIpgJd-yAWNEb-VIpgJd-fmcmS-sn54Q {
+    all: unset !important;
+    /* This resets all styles applied to this element */
+    background-color: none !important;
+    /* You can still explicitly set this if needed */
+    box-shadow: none !important;
+    /* Remove box-shadow if needed */
+}
+
+#google_translate_element {
+    display: none;
+}
+
+.flagContainer {
+    display: none;
+    line-height: 30px;
+    gap: 15px;
+    width: 10%;
+    margin-top: 20px;
+    top: 10%;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flag_link {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+}
+
+.flag_link img {
+    width: 24px;
+    height: 16px;
+    margin-right: 8px;
+    transition: transform 0.2s ease;
+}
+
+.flag_link:hover {
+    text-decoration: underline;
+}
+
+.flag_link:hover img {
+    transform: scale(1.1);
+}
+
+.globe-icon {
+    padding-left: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.globe-icon:hover {
+    color: #007bff;
+}
+
+#goog-gt-tt {
+    visibility: hidden !important;
+}
+
+.languagespage {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.skiptranslate {
+    display: none;
+}
+.jIdXfu{
+    flex-direction: inherit !important;
+}
