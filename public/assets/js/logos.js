@@ -44,7 +44,7 @@ function showLogoDetails(logoId, logosData) {
 
 
 function fetchLogosData() {
-    fetch('./assets/js/Json/logos.json')
+    fetch('/api/partners')
         .then(response => response.json())
         .then(logosData => {
             displayLogos(logosData);

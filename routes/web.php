@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ServiceContactController;
+use App\Http\Controllers\PartnerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +30,6 @@ Route::get('/product',[\App\Http\Controllers\ProductController::class,'index'])-
 Route::get('/blog',[\App\Http\Controllers\ProductController::class,'blog'])->name('blog.index');
 Route::get('/blog/{slug}',[\App\Http\Controllers\ProductController::class,'blogDetail'])->name('blog.show');
 Route::get('/about',[\App\Http\Controllers\AboutController::class,'index'])->name('about.index');;
+Route::post('/service-contact', [ServiceContactController::class, 'store'])->name('service-contact.store');
+Route::get('/partners', [PartnerController::class, 'index'])->name('partners.index');
+

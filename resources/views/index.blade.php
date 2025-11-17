@@ -28,6 +28,9 @@
           integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Toastr CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
     <!-- Custom CSS (Her biri yalnızca 1 kez!) -->
     <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/video.css')}}">
@@ -1474,43 +1477,55 @@
 
 
 
-                <div id="service-contact" class="whatwedo_tab_content content-section ">
+                <div id="service-contact" class="whatwedo_tab_content content-section">
                     <div class="contact-container">
                         <h1 class="contact-heading">Contact Us</h1>
                         <p class="contact-subheading">Got questions or comments? Use the form below to get in touch.</p>
-                        <form class="contact-fields">
+
+                        <form class="contact-fields" id="serviceContactForm" method="POST" action="/service-contact">
+                            @csrf
+
                             <div class="input-row">
                                 <div class="input-block">
                                     <label for="name" class="field-label">Name</label>
-                                    <input type="text" id="name" placeholder="Your name" class="field-input" required>
+                                    <input type="text" id="name" name="name" placeholder="Your name" class="field-input" required>
                                 </div>
                                 <div class="input-block">
                                     <label for="email" class="field-label">Email</label>
-                                    <input type="email" id="email" placeholder="Your email" class="field-input" required>
+                                    <input type="email" id="email" name="email" placeholder="Your email" class="field-input" required>
                                 </div>
                             </div>
+
                             <div class="input-row">
                                 <div class="input-block">
-                                    <label for="contact" class="field-label">Company </label>
-                                    <input type="tel" id="contact" placeholder="Company name" class="field-input" required>
+                                    <label for="partner" class="field-label">Company</label>
+                                    <input type="text" id="partner" name="partner" placeholder="Company name" class="field-input" required>
                                 </div>
                                 <div class="input-block">
-                                    <label for="subject" class="field-label">Position</label>
-                                    <input type="text" id="subject" placeholder="e.g. Project Manager, Engineer" class="field-input"
-                                           required>
+                                    <label for="position" class="field-label">Position</label>
+                                    <input type="text" id="position" name="position" placeholder="e.g. Project Manager, Engineer"
+                                           class="field-input" required>
                                 </div>
                             </div>
+
                             <div class="input-row">
                                 <div class="input-block">
-                                    <label for="issue" class="field-label">Describe your issue</label>
-                                    <textarea id="issue" placeholder="Describe your issue" rows="4" class="field-textarea"
-                                              required></textarea>
+                                    <label for="content" class="field-label">Describe your issue</label>
+                                    <textarea id="content" name="content" placeholder="Describe your issue" rows="4"
+                                              class="field-textarea" required></textarea>
                                 </div>
                             </div>
+
                             <button type="submit" class="form-submit-btn">Submit</button>
                         </form>
-                    </div>
 
+                        <p id="contactSuccess" style="color:green; display:none; margin-top:15px;">
+                            Message sent successfully!
+                        </p>
+                        <p id="contactError" style="color:red; display:none; margin-top:15px;">
+                            Something went wrong. Please try again.
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -2252,262 +2267,105 @@
 
 
     <!-- Logos  -->
+    @php
+        $locale = app()->getLocale(); // AZ, EN, RU, TR, DE
+    @endphp
+
     <section class="LogosSection container">
         <h3 class="bh-cke-eyebrow-heading">
             Our Partner
         </h3>
 
-        <div class="Logosmain ">
-
+        <div class="Logosmain">
             <div class="">
                 <div class="row">
 
-
+                    {{-- Logo list --}}
                     <div class="col-lg-6">
                         <div class="logos-container12">
-                            <div class="logos12" id="logos12"></div>
+                            <div class="logos12" id="logos12">
+                                @foreach($partners as $index => $partner)
+                                    @php
+                                        $title = $partner->title[$locale] ?? $partner->title['en'] ?? '';
+                                        $description = $partner->content[$locale] ?? $partner->content['en'] ?? '';
+                                        $image = $partner->image ? asset('storage/' . $partner->image) : '';
+                                        $url = $partner->url ?? '#';
+                                    @endphp
+                                    <div class="logo12 {{ $index === 0 ? 'active' : '' }}"
+                                         data-id12="{{ $partner->id }}"
+                                         data-name12="{{ $title }}"
+                                         data-description12="{{ $description }}"
+                                         data-image12="{{ $image }}"
+                                         data-url12="{{ $url }}"
+                                         onclick="showPartnerDetails(this)">
+                                        @if($image)
+                                            <img src="{{ $image }}" alt="{{ $title }}">
+                                        @endif
+                                    </div>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
+
+                    {{-- Details section --}}
                     <div class="col-lg-6">
-                        <div class="details12 " id="details12">
+                        <div class="details12" id="details12">
                             <div class="col-lg-12 order-2 order-lg-1">
-                                <h3 id="logo-name12"></h3>
+                                <h3 id="logo-name12">
+                                    {{ $partners->count() > 0 ? ($partners->first()->title[$locale] ?? $partners->first()->title['en'] ?? '') : '' }}
+                                </h3>
                                 <div class="details-content12">
                                     <div class="details-header12">
                                         <p id="logo-description12" class="text-dark description-trimmed"
                                            style="font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.5; overflow: hidden;">
-                                            <!-- Açıklama metni buraya dinamik olarak JS ile gelecek -->
+                                            {{ $partners->count() > 0 ? ($partners->first()->content[$locale] ?? $partners->first()->content['en'] ?? '') : '' }}
                                         </p>
-                                        <button id="toggle-description" class="btn btn-link p-0" style="font-size: 0.9rem;">Read
-                                            more</button>
-                                        <script>
-                                            const desc = document.getElementById('logo-description12');
-                                            const toggleBtn = document.getElementById('toggle-description');
-
-                                            toggleBtn.addEventListener('click', function () {
-                                                const isExpanded = desc.classList.contains('description-expanded');
-                                                desc.classList.toggle('description-expanded');
-                                                desc.classList.toggle('description-trimmed');
-                                                toggleBtn.textContent = isExpanded ? 'Read more' : 'Read less';
-                                            });
-                                        </script>
-
-
+                                        <button id="toggle-description" class="btn btn-link p-0" style="font-size: 0.9rem;">Read more</button>
                                     </div>
-
                                 </div>
-
-
                             </div>
-                            <div class="col-lg-6 order-1 order-lg-2">
-                                <a href="" class="data-url12" target="_blank">
 
-                                    <img id="logo-image12" src="" alt="" />
+                            <div class="col-lg-6 order-1 order-lg-2">
+                                <a href="{{ $partners->count() > 0 ? ($partners->first()->url ?? '#') : '#' }}" class="data-url12" target="_blank">
+                                    @if($partners->count() > 0 && $partners->first()->image)
+                                        <img id="logo-image12" src="{{ asset('storage/' . $partners->first()->image) }}" alt="" />
+                                    @else
+                                        <img id="logo-image12" src="" alt="" />
+                                    @endif
                                 </a>
                             </div>
                         </div>
-
-
                     </div>
+
                 </div>
-
-
             </div>
         </div>
     </section>
-    <!-- <section id="clients" class="clients section">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <script>
+        const desc = document.getElementById('logo-description12');
+        const toggleBtn = document.getElementById('toggle-description');
 
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
+        toggleBtn.addEventListener('click', function () {
+            const isExpanded = desc.classList.contains('description-expanded');
+            desc.classList.toggle('description-expanded');
+            desc.classList.toggle('description-trimmed');
+            toggleBtn.textContent = isExpanded ? 'Read more' : 'Read less';
+        });
 
+        function showPartnerDetails(element) {
+            // Remove active class from all logos
+            document.querySelectorAll('.logo12').forEach(logo => logo.classList.remove('active'));
+            // Add active class to clicked logo
+            element.classList.add('active');
 
-    </section> -->
-
-    <!--    &lt;!&ndash; Testimonials Section &ndash;&gt;-->
-    <!--    <section id="testimonials" class="testimonials section">-->
-
-    <!--      &lt;!&ndash; Section Title &ndash;&gt;-->
-    <!--      <div class="container section-title" data-aos="fade-up">-->
-    <!--        <h2>Testimonials</h2>-->
-    <!--        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>-->
-    <!--      </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
-
-    <!--      <div class="container" data-aos="fade-up" data-aos-delay="100">-->
-
-    <!--        <div class="swiper init-swiper">-->
-    <!--          <script type="application/json" class="swiper-config">-->
-    <!--            {-->
-    <!--              "loop": true,-->
-    <!--              "speed": 600,-->
-    <!--              "autoplay": {-->
-    <!--                "delay": 5000-->
-    <!--              },-->
-    <!--              "slidesPerView": "auto",-->
-    <!--              "pagination": {-->
-    <!--                "el": ".swiper-pagination",-->
-    <!--                "type": "bullets",-->
-    <!--                "clickable": true-->
-    <!--              },-->
-    <!--              "breakpoints": {-->
-    <!--                "320": {-->
-    <!--                  "slidesPerView": 1,-->
-    <!--                  "spaceBetween": 40-->
-    <!--                },-->
-    <!--                "1200": {-->
-    <!--                  "slidesPerView": 2,-->
-    <!--                  "spaceBetween": 20-->
-    <!--                }-->
-    <!--              }-->
-    <!--            }-->
-    <!--          </script>-->
-    <!--          <div class="swiper-wrapper">-->
-
-    <!--            <div class="swiper-slide">-->
-    <!--              <div class="testimonial-wrap">-->
-    <!--                <div class="testimonial-item">-->
-    <!--                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
-    <!--                  <h3>Saul Goodman</h3>-->
-    <!--                  <h4>Ceo &amp; Founder</h4>-->
-    <!--                  <div class="stars">-->
-    <!--                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i-->
-    <!--                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>-->
-    <!--                  </div>-->
-    <!--                  <p>-->
-    <!--                    <i class="bi bi-quote quote-icon-left"></i>-->
-    <!--                    <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.-->
-    <!--                      Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>-->
-    <!--                    <i class="bi bi-quote quote-icon-right"></i>-->
-    <!--                  </p>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End testimonial item &ndash;&gt;-->
-
-    <!--            <div class="swiper-slide">-->
-    <!--              <div class="testimonial-wrap">-->
-    <!--                <div class="testimonial-item">-->
-    <!--                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">-->
-    <!--                  <h3>Sara Wilsson</h3>-->
-    <!--                  <h4>Designer</h4>-->
-    <!--                  <div class="stars">-->
-    <!--                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i-->
-    <!--                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>-->
-    <!--                  </div>-->
-    <!--                  <p>-->
-    <!--                    <i class="bi bi-quote quote-icon-left"></i>-->
-    <!--                    <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram-->
-    <!--                      malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>-->
-    <!--                    <i class="bi bi-quote quote-icon-right"></i>-->
-    <!--                  </p>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End testimonial item &ndash;&gt;-->
-
-    <!--            <div class="swiper-slide">-->
-    <!--              <div class="testimonial-wrap">-->
-    <!--                <div class="testimonial-item">-->
-    <!--                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">-->
-    <!--                  <h3>Jena Karlis</h3>-->
-    <!--                  <h4>Store Owner</h4>-->
-    <!--                  <div class="stars">-->
-    <!--                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i-->
-    <!--                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>-->
-    <!--                  </div>-->
-    <!--                  <p>-->
-    <!--                    <i class="bi bi-quote quote-icon-left"></i>-->
-    <!--                    <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis-->
-    <!--                      minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>-->
-    <!--                    <i class="bi bi-quote quote-icon-right"></i>-->
-    <!--                  </p>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End testimonial item &ndash;&gt;-->
-
-    <!--            <div class="swiper-slide">-->
-    <!--              <div class="testimonial-wrap">-->
-    <!--                <div class="testimonial-item">-->
-    <!--                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">-->
-    <!--                  <h3>Matt Brandon</h3>-->
-    <!--                  <h4>Freelancer</h4>-->
-    <!--                  <div class="stars">-->
-    <!--                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i-->
-    <!--                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>-->
-    <!--                  </div>-->
-    <!--                  <p>-->
-    <!--                    <i class="bi bi-quote quote-icon-left"></i>-->
-    <!--                    <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim-->
-    <!--                      velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum-->
-    <!--                      veniam.</span>-->
-    <!--                    <i class="bi bi-quote quote-icon-right"></i>-->
-    <!--                  </p>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End testimonial item &ndash;&gt;-->
-
-    <!--            <div class="swiper-slide">-->
-    <!--              <div class="testimonial-wrap">-->
-    <!--                <div class="testimonial-item">-->
-    <!--                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">-->
-    <!--                  <h3>John Larson</h3>-->
-    <!--                  <h4>Entrepreneur</h4>-->
-    <!--                  <div class="stars">-->
-    <!--                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i-->
-    <!--                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>-->
-    <!--                  </div>-->
-    <!--                  <p>-->
-    <!--                    <i class="bi bi-quote quote-icon-left"></i>-->
-    <!--                    <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam-->
-    <!--                      enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi-->
-    <!--                      cillum quid.</span>-->
-    <!--                    <i class="bi bi-quote quote-icon-right"></i>-->
-    <!--                  </p>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End testimonial item &ndash;&gt;-->
-
-    <!--          </div>-->
-    <!--          <div class="swiper-pagination"></div>-->
-    <!--        </div>-->
-
-    <!--      </div>-->
-
-    <!--    </section>&lt;!&ndash; /Testimonials Section &ndash;&gt;-->
-
-    <!--    &lt;!&ndash; Recent Blog Posts Section &ndash;&gt;-->
-
+            // Update details
+            document.getElementById('logo-name12').textContent = element.dataset.name12;
+            document.getElementById('logo-description12').textContent = element.dataset.description12;
+            document.getElementById('logo-image12').src = element.dataset.image12;
+            document.querySelector('.data-url12').href = element.dataset.url12;
+        }
+    </script>
 
 </main>
 <footer class="text-secondary py-5 footermain" role="contentinfo">
@@ -2609,7 +2467,9 @@
 <div id="preloader"></div>
 
 <!-- Vendor JS Files -->
-<<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}" defer></script>
 <script src="{{ asset('assets/vendor/aos/aos.js') }}" defer></script>
 <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }}" defer></script>
@@ -2641,6 +2501,30 @@
         fetchProducts();
     });
 </script>
+
+@if(session('success'))
+<script>
+    toastr.options = {
+        "closeButton": true,
+        "progressBar": true,
+        "positionClass": "toast-top-right",
+        "timeOut": "5000"
+    };
+    toastr.success('{{ session('success') }}');
+</script>
+@endif
+
+@if(session('error'))
+<script>
+    toastr.options = {
+        "closeButton": true,
+        "progressBar": true,
+        "positionClass": "toast-top-right",
+        "timeOut": "5000"
+    };
+    toastr.error('{{ session('error') }}');
+</script>
+@endif
 
 </body>
 
