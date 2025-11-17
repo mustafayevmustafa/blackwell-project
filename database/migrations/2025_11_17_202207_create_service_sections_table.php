@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pana_products', function (Blueprint $table) {
+        Schema::create('service_sections', function (Blueprint $table) {
             $table->id();
             $table->json('title');
-            $table->json('description');
+            $table->json('content');
             $table->string('image')->nullable();
-            $table->string('datasheet')->nullable();
             $table->integer('order')->default(0);
             $table->boolean('is_active')->default(true);
             $table->timestamps();
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pana_products');
+        Schema::dropIfExists('service_sections');
     }
 };

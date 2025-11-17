@@ -37,4 +37,24 @@ class PartnerController extends Controller
         return view('index', compact('partners'));
     }
 
+    public function api()
+    {
+        $locale = app()->getLocale();
+
+        $partners = Partner::all()->map(function ($partner) use ($locale) {
+            $title = $partner->title[$locale] ?? $partner->title['en'] ?? '';
+            $content = $partner->content[$locale] ?? $partner->content['en'] ?? '';
+            $imagePath = $partner->image ? asset('storage/' . $partner->image) : asset('assets/img/no-image.png');
+
+            return [
+                'id'          => $partner->id,
+                'name'        => $title,
+                'description' => $content,
+                'image'       => $imagePath,
+                'url'         => $partner->url ?? '#',
+            ];
+        });
+
+        return response()->json($partners);
+    }
 }

@@ -32,4 +32,7 @@ Route::get('/blog/{slug}',[\App\Http\Controllers\ProductController::class,'blogD
 Route::get('/about',[\App\Http\Controllers\AboutController::class,'index'])->name('about.index');;
 Route::post('/service-contact', [ServiceContactController::class, 'store'])->name('service-contact.store');
 Route::get('/partners', [PartnerController::class, 'index'])->name('partners.index');
+Route::get('/api/partners', [PartnerController::class, 'api'])->name('partners.api');
+Route::post('/request-quote', [\App\Http\Controllers\ContactController::class, 'requestQuote'])->name('request-quote.store');
+Route::post('/expert-contact', [\App\Http\Controllers\ContactController::class, 'expertContact'])->name('expert-contact.store');
 
