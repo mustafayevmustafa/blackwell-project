@@ -297,56 +297,7 @@
     @include('sections.teams')
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-        <!-- Section Title -->
-        <div class="container section-title">
-            <h2>Testimonials</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-        </div>
-
-        <div class="testimonial-container">
-            <div class="testimonial-wrapper">
-                <div class="testimonial">
-                    <img src="assets/img/testimonials/testimonials-1.jpg" alt="">
-                    <div class="testimonial-content">
-                        <h3>Saul Goodman</h3>
-                        <h4>CEO & Founder</h4>
-                        <div class="stars">★★★★★</div>
-                        <p> ❝ GL, founded on April 15, 2019, has grown significantly and transformed into a group of companies by
-                            May 1, 2024. GL Group is the . ❞</p>
-                    </div>
-                </div>
-
-                <div class="testimonial">
-                    <img src="assets/img/testimonials/testimonials-2.jpg" alt="">
-                    <div class="testimonial-content">
-                        <h3>Sara Wilsson</h3>
-                        <h4>Designer</h4>
-                        <div class="stars">★★★★★</div>
-                        <p>GL, founded on April 15, 2019, has grown significantly and transformed into a group of companies by May
-                            1, 2024. GL Group is the </p>
-                    </div>
-                </div>
-
-                <div class="testimonial">
-                    <img src="assets/img/testimonials/testimonials-3.jpg" alt="">
-                    <div class="testimonial-content">
-                        <h3>Jena Karlis</h3>
-                        <h4>Store Owner</h4>
-                        <div class="stars">★★★★★</div>
-                        <p>GL, founded on April 15, 2019, has grown significantly and transformed into a group of companies by May
-                            1, 2024. GL Group is the .</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="testimonialbuttons">
-            <button onclick="prevSlide()">❮</button>
-            <button onclick="nextSlide()">❯</button>
-        </div>
-    </section>
-
+@include('sections.testimonials')
 
 </main>
 
