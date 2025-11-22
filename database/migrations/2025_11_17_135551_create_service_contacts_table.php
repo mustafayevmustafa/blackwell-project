@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('partner')->nullable();
             $table->string('position')->nullable();
-            $table->longText('content')->default(false)->nullable();
+            $table->longText('content')->nullable();
             $table->boolean('status')->default(false)->nullable();
             $table->timestamps();
         });
