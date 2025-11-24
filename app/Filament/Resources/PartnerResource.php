@@ -24,58 +24,50 @@ class PartnerResource extends Resource
     {
         return $form
             ->schema([
-
-                Forms\Components\Section::make('Titles (Multi-language)')
+                Forms\Components\Section::make('Main Information')
                     ->schema([
-
-                        Forms\Components\TextInput::make('title.az')
-                            ->label('Title (AZ)')
-                            ->required(),
-
                         Forms\Components\TextInput::make('title.en')
                             ->label('Title (EN)')
                             ->required(),
 
-                        Forms\Components\TextInput::make('title.ru')
-                            ->label('Title (RU)')
-                            ->required(),
+                        Forms\Components\Textarea::make('content.en')
+                            ->label('Content (EN)')
+                            ->rows(4),
+                    ]),
 
-                        Forms\Components\TextInput::make('title.tr')
-                            ->label('Title (TR)')
-                            ->required(),
-
-                        Forms\Components\TextInput::make('title.de')
-                            ->label('Title (DE)')
-                            ->required(),
-
-                    ])
-                    ->columns(2),
-
-                Forms\Components\Section::make('Content (Multi-language)')
+                Forms\Components\Section::make('Other Languages')
                     ->schema([
+                        Forms\Components\TextInput::make('title.az')
+                            ->label('Title (AZ)'),
 
                         Forms\Components\Textarea::make('content.az')
                             ->label('Content (AZ)')
                             ->rows(4),
 
-                        Forms\Components\Textarea::make('content.en')
-                            ->label('Content (EN)')
-                            ->rows(4),
+                        Forms\Components\TextInput::make('title.ru')
+                            ->label('Title (RU)'),
 
                         Forms\Components\Textarea::make('content.ru')
                             ->label('Content (RU)')
                             ->rows(4),
 
+                        Forms\Components\TextInput::make('title.tr')
+                            ->label('Title (TR)'),
+
                         Forms\Components\Textarea::make('content.tr')
                             ->label('Content (TR)')
                             ->rows(4),
 
+                        Forms\Components\TextInput::make('title.de')
+                            ->label('Title (DE)'),
+
                         Forms\Components\Textarea::make('content.de')
                             ->label('Content (DE)')
                             ->rows(4),
-
                     ])
-                    ->columns(2),
+                    ->columns(2)
+                    ->collapsed()
+                    ->collapsible(),
 
                 Forms\Components\FileUpload::make('image')
                     ->label('Image')
@@ -111,6 +103,17 @@ class PartnerResource extends Resource
                     ->sortable(),
             ])
             ->actions([
+                Tables\Actions\Action::make('viewTranslations')
+                    ->label('Translations')
+                    ->icon('heroicon-o-language')
+                    ->color('info')
+                    ->modalHeading('All Translations')
+                    ->modalContent(fn ($record) => view('filament.tables.translations-modal', [
+                        'record' => $record,
+                        'titleField' => 'title'
+                    ]))
+                    ->modalSubmitActionLabel('Close')
+                    ->modalCancelAction(false),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])

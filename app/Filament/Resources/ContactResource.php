@@ -100,4 +100,14 @@ class ContactResource extends Resource
     {
         return true;
     }
+
+    public static function canCreate(): bool
+    {
+        return false;
+    }
+
+    public static function canEdit($record): bool
+    {
+        return false;
+    }
 }

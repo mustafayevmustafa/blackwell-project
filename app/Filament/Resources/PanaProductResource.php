@@ -23,52 +23,51 @@ class PanaProductResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Section::make('Titles (Multi-language)')
+                Forms\Components\Section::make('Main Information')
                     ->schema([
-                        Forms\Components\TextInput::make('title.az')
-                            ->label('Title (AZ)')
-                            ->required(),
-
                         Forms\Components\TextInput::make('title.en')
                             ->label('Title (EN)')
-                            ->required(),
-
-                        Forms\Components\TextInput::make('title.ru')
-                            ->label('Title (RU)'),
-
-                        Forms\Components\TextInput::make('title.tr')
-                            ->label('Title (TR)'),
-
-                        Forms\Components\TextInput::make('title.de')
-                            ->label('Title (DE)'),
-                    ])
-                    ->columns(2),
-
-                Forms\Components\Section::make('Description (Multi-language)')
-                    ->schema([
-                        Forms\Components\Textarea::make('description.az')
-                            ->label('Description (AZ)')
-                            ->rows(5)
                             ->required(),
 
                         Forms\Components\Textarea::make('description.en')
                             ->label('Description (EN)')
                             ->rows(5)
                             ->required(),
+                    ]),
+
+                Forms\Components\Section::make('Other Languages')
+                    ->schema([
+                        Forms\Components\TextInput::make('title.az')
+                            ->label('Title (AZ)'),
+
+                        Forms\Components\Textarea::make('description.az')
+                            ->label('Description (AZ)')
+                            ->rows(5),
+
+                        Forms\Components\TextInput::make('title.ru')
+                            ->label('Title (RU)'),
 
                         Forms\Components\Textarea::make('description.ru')
                             ->label('Description (RU)')
                             ->rows(5),
 
+                        Forms\Components\TextInput::make('title.tr')
+                            ->label('Title (TR)'),
+
                         Forms\Components\Textarea::make('description.tr')
                             ->label('Description (TR)')
                             ->rows(5),
+
+                        Forms\Components\TextInput::make('title.de')
+                            ->label('Title (DE)'),
 
                         Forms\Components\Textarea::make('description.de')
                             ->label('Description (DE)')
                             ->rows(5),
                     ])
-                    ->columns(2),
+                    ->columns(2)
+                    ->collapsed()
+                    ->collapsible(),
 
                 Forms\Components\Section::make('Media & Settings')
                     ->schema([
@@ -127,6 +126,17 @@ class PanaProductResource extends Resource
             ])
             ->defaultSort('order')
             ->actions([
+                Tables\Actions\Action::make('viewTranslations')
+                    ->label('Translations')
+                    ->icon('heroicon-o-language')
+                    ->color('info')
+                    ->modalHeading('All Translations')
+                    ->modalContent(fn ($record) => view('filament.tables.translations-modal', [
+                        'record' => $record,
+                        'titleField' => 'title'
+                    ]))
+                    ->modalSubmitActionLabel('Close')
+                    ->modalCancelAction(false),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])

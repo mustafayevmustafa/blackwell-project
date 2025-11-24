@@ -23,71 +23,59 @@ class ProductResource extends Resource
     {
         return $form
             ->schema([
-                // 🌍 Multilingual tabs
-                Forms\Components\Tabs::make('Translations')
-                    ->columnSpanFull()
-                    ->tabs([
-                        Forms\Components\Tabs\Tab::make('AZ')
-                            ->schema([
-                                Forms\Components\TextInput::make('title.az')
-                                    ->label('Title (AZ)')
-                                    ->maxLength(255),
-                                Forms\Components\Textarea::make('content.az')
-                                    ->label('Content (AZ)')
-                                    ->rows(5),
-                            ]),
-
-                        Forms\Components\Tabs\Tab::make('EN')
-                            ->schema([
-                                Forms\Components\TextInput::make('title.en')
-                                    ->label('Title (EN)')
-                                    ->maxLength(255)
-                                    ->live(onBlur: true)
-                                    ->afterStateUpdated(function ($state, callable $set) {
-                                        if ($state) {
-                                            $set('slug', Str::slug($state));
-                                        }
-                                    }),
-                                Forms\Components\Textarea::make('content.en')
-                                    ->label('Content (EN)')
-                                    ->rows(5),
-                            ]),
-
-                        Forms\Components\Tabs\Tab::make('RU')
-                            ->schema([
-                                Forms\Components\TextInput::make('title.ru')
-                                    ->label('Title (RU)')
-                                    ->maxLength(255),
-                                Forms\Components\Textarea::make('content.ru')
-                                    ->label('Content (RU)')
-                                    ->rows(5),
-                            ]),
-
-                        Forms\Components\Tabs\Tab::make('TR')
-                            ->schema([
-                                Forms\Components\TextInput::make('title.tr')
-                                    ->label('Title (TR)')
-                                    ->maxLength(255),
-                                Forms\Components\Textarea::make('content.tr')
-                                    ->label('Content (TR)')
-                                    ->rows(5),
-                            ]),
-
-                        Forms\Components\Tabs\Tab::make('DE')
-                            ->schema([
-                                Forms\Components\TextInput::make('title.de')
-                                    ->label('Title (DE)')
-                                    ->maxLength(255),
-                                Forms\Components\Textarea::make('content.de')
-                                    ->label('Content (DE)')
-                                    ->rows(5),
-                            ]),
+                Forms\Components\Section::make('Main Information')
+                    ->schema([
+                        Forms\Components\TextInput::make('title.en')
+                            ->label('Title (EN)')
+                            ->maxLength(255)
+                            ->required()
+                            ->live(onBlur: true)
+                            ->afterStateUpdated(function ($state, callable $set) {
+                                if ($state) {
+                                    $set('slug', Str::slug($state));
+                                }
+                            }),
+                        Forms\Components\Textarea::make('content.en')
+                            ->label('Content (EN)')
+                            ->rows(5),
                     ]),
 
-                // Hidden slug
+                Forms\Components\Section::make('Other Languages')
+                    ->schema([
+                        Forms\Components\TextInput::make('title.az')
+                            ->label('Title (AZ)')
+                            ->maxLength(255),
+                        Forms\Components\Textarea::make('content.az')
+                            ->label('Content (AZ)')
+                            ->rows(4),
+
+                        Forms\Components\TextInput::make('title.ru')
+                            ->label('Title (RU)')
+                            ->maxLength(255),
+                        Forms\Components\Textarea::make('content.ru')
+                            ->label('Content (RU)')
+                            ->rows(4),
+
+                        Forms\Components\TextInput::make('title.tr')
+                            ->label('Title (TR)')
+                            ->maxLength(255),
+                        Forms\Components\Textarea::make('content.tr')
+                            ->label('Content (TR)')
+                            ->rows(4),
+
+                        Forms\Components\TextInput::make('title.de')
+                            ->label('Title (DE)')
+                            ->maxLength(255),
+                        Forms\Components\Textarea::make('content.de')
+                            ->label('Content (DE)')
+                            ->rows(4),
+                    ])
+                    ->columns(2)
+                    ->collapsed()
+                    ->collapsible(),
+
                 Forms\Components\Hidden::make('slug'),
 
-                // 🏷️ Category Select
                 Forms\Components\Select::make('category_id')
                     ->label('Category')
                     ->relationship('category', 'title')
@@ -96,29 +84,26 @@ class ProductResource extends Resource
                     ->preload()
                     ->nullable(),
 
-                // 💰 Price section with nested fields
                 Forms\Components\Section::make('Price Information')
-                    ->columnSpanFull()
                     ->schema([
                         Forms\Components\TextInput::make('price')
                             ->numeric()
                             ->label('Price'),
 
-                        // 📦 Stock count (nested under price)
                         Forms\Components\TextInput::make('count')
                             ->numeric()
                             ->label('Stock Count')
                             ->minValue(0)
                             ->default(0),
 
-                        // 🖼️ Image (nested under count)
                         Forms\Components\FileUpload::make('image')
                             ->label('Image')
                             ->image()
                             ->directory('products')
                             ->preserveFilenames()
                             ->maxSize(2048),
-                    ]),
+                    ])
+                    ->columns(2),
             ]);
     }
 
@@ -136,7 +121,7 @@ class ProductResource extends Resource
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('title')
-                    ->label('Title')
+                    ->label('Title (EN)')
                     ->formatStateUsing(fn ($state) => is_array($state) ? ($state['en'] ?? $state['az'] ?? 'N/A') : $state)
                     ->searchable(['title->en', 'title->az', 'title->ru', 'title->tr', 'title->de']),
                 Tables\Columns\TextColumn::make('price')
@@ -152,6 +137,17 @@ class ProductResource extends Resource
                     ->sortable(),
             ])
             ->actions([
+                Tables\Actions\Action::make('viewTranslations')
+                    ->label('Translations')
+                    ->icon('heroicon-o-language')
+                    ->color('info')
+                    ->modalHeading(fn ($record) => 'All Translations')
+                    ->modalContent(fn ($record) => view('filament.tables.translations-modal', [
+                        'record' => $record,
+                        'titleField' => 'title'
+                    ]))
+                    ->modalSubmitActionLabel('Close')
+                    ->modalCancelAction(false),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])

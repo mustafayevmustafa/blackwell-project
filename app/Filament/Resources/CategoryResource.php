@@ -22,43 +22,35 @@ class CategoryResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Tabs::make('Translations')
-                    ->tabs([
-                        Forms\Components\Tabs\Tab::make('AZ')
-                            ->schema([
-                                Forms\Components\TextInput::make('title.az')
-                                    ->label('Title (AZ)')
-                                    ->maxLength(255),
-                            ]),
-
-                        Forms\Components\Tabs\Tab::make('EN')
-                            ->schema([
-                                Forms\Components\TextInput::make('title.en')
-                                    ->label('Title (EN)')
-                                    ->maxLength(255),
-                            ]),
-
-                        Forms\Components\Tabs\Tab::make('RU')
-                            ->schema([
-                                Forms\Components\TextInput::make('title.ru')
-                                    ->label('Title (RU)')
-                                    ->maxLength(255),
-                            ]),
-
-                        Forms\Components\Tabs\Tab::make('TR')
-                            ->schema([
-                                Forms\Components\TextInput::make('title.tr')
-                                    ->label('Title (TR)')
-                                    ->maxLength(255),
-                            ]),
-
-                        Forms\Components\Tabs\Tab::make('DE')
-                            ->schema([
-                                Forms\Components\TextInput::make('title.de')
-                                    ->label('Title (DE)')
-                                    ->maxLength(255),
-                            ]),
+                Forms\Components\Section::make('Main Information')
+                    ->schema([
+                        Forms\Components\TextInput::make('title.en')
+                            ->label('Title (EN)')
+                            ->maxLength(255)
+                            ->required(),
                     ]),
+
+                Forms\Components\Section::make('Other Languages')
+                    ->schema([
+                        Forms\Components\TextInput::make('title.az')
+                            ->label('Title (AZ)')
+                            ->maxLength(255),
+
+                        Forms\Components\TextInput::make('title.ru')
+                            ->label('Title (RU)')
+                            ->maxLength(255),
+
+                        Forms\Components\TextInput::make('title.tr')
+                            ->label('Title (TR)')
+                            ->maxLength(255),
+
+                        Forms\Components\TextInput::make('title.de')
+                            ->label('Title (DE)')
+                            ->maxLength(255),
+                    ])
+                    ->columns(2)
+                    ->collapsed()
+                    ->collapsible(),
             ]);
     }
 
@@ -87,6 +79,17 @@ class CategoryResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->actions([
+                Tables\Actions\Action::make('viewTranslations')
+                    ->label('Translations')
+                    ->icon('heroicon-o-language')
+                    ->color('info')
+                    ->modalHeading('All Translations')
+                    ->modalContent(fn ($record) => view('filament.tables.translations-modal', [
+                        'record' => $record,
+                        'titleField' => 'title'
+                    ]))
+                    ->modalSubmitActionLabel('Close')
+                    ->modalCancelAction(false),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])

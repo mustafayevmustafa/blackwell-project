@@ -64,8 +64,16 @@ class TechnicalConsultationResource extends Resource
     {
         return [
             'index' => Pages\ListTechnicalConsultations::route('/'),
-            'create' => Pages\CreateTechnicalConsultation::route('/create'),
-            'edit' => Pages\EditTechnicalConsultation::route('/{record}/edit'),
         ];
+    }
+
+    public static function canCreate(): bool
+    {
+        return false;
+    }
+
+    public static function canEdit($record): bool
+    {
+        return false;
     }
 }

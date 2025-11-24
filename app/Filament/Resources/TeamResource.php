@@ -75,7 +75,8 @@ class TeamResource extends Resource
                 ->sortable(),
         ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
@@ -86,8 +87,16 @@ class TeamResource extends Resource
     {
         return [
             'index' => ListTeams::route('/'),
-            'create' => CreateTeam::route('/create'),
-            'edit' => EditTeam::route('/{record}/edit'),
         ];
+    }
+
+    public static function canCreate(): bool
+    {
+        return false;
+    }
+
+    public static function canEdit($record): bool
+    {
+        return false;
     }
 }
