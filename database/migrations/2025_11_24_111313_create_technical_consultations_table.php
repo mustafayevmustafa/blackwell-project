@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description')->nullable();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->dateTime('scheduled_at')->nullable();
             $table->boolean('is_completed')->default(false);
             $table->timestamps();
