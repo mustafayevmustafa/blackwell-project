@@ -41,7 +41,7 @@ class BlogResource extends Resource
                                 Forms\Components\TextInput::make('title.en')
                                     ->label('Title (EN)')
                                     ->maxLength(255)
-                                    ->reactive()
+                                    ->live(onBlur: true)
                                     ->afterStateUpdated(function ($state, callable $set) {
                                         if ($state) {
                                             $set('slug', Str::slug($state));
