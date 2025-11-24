@@ -109,7 +109,6 @@ class ContactController extends Controller
         TechnicalConsultation::create([
             'title' => $request->fullname,
             'description' => $request->problemdescription,
-            'user_id' => auth()->id() ?? null, // optional
             'scheduled_at' => $request->consultationdate,
             'is_completed' => false,
         ]);
