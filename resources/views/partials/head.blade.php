@@ -38,4 +38,6 @@
 
     <link rel="stylesheet" href="./assets/css/about.css">
     <link rel="stylesheet" href="/assets/css/languagepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
 </head>

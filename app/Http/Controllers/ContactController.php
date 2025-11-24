@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Models\TechnicalConsultation;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -88,5 +89,31 @@ class ContactController extends Controller
         }
 
         return back()->with('success', 'Your request has been sent successfully!');
+    }
+
+
+    public  function technical(){
+        return view('technical');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'fullname' => 'required|string|max:255',
+            'companyname' => 'required|string|max:255',
+            'position' => 'required|string|max:255',
+            'consultationdate' => 'required|date',
+            'problemdescription' => 'required|string',
+        ]);
+
+        TechnicalConsultation::create([
+            'title' => $request->fullname,
+            'description' => $request->problemdescription,
+            'user_id' => auth()->id() ?? null, // optional
+            'scheduled_at' => $request->consultationdate,
+            'is_completed' => false,
+        ]);
+
+        return redirect()->back()->with('success', 'Your request has been submitted. Thank you!');
     }
 }

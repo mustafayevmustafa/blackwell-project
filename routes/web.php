@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServiceContactController;
 use App\Http\Controllers\PartnerController;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,8 @@ Route::get('/',[\App\Http\Controllers\HomeController::class,'index'])->name('hom
 //Route::get('/',[\App\Http\Controllers\BlogController::class,'index']);
 Route::get('/contact',[\App\Http\Controllers\ContactController::class,'index'])->name('contact.index');
 Route::post('/contact',[\App\Http\Controllers\ContactController::class,'send'])->name('contact.send');;
+Route::get('/technical',[\App\Http\Controllers\ContactController::class,'technical'])->name('technical');;
+Route::post('/consultation', [ContactController::class, 'store'])->name('consultation.store');
 Route::get('/stock',[\App\Http\Controllers\ProductController::class,'stock'])->name('stock');
 Route::post('/stock/check',[\App\Http\Controllers\ProductController::class,'checkStock'])->name('stock.check');
 Route::get('/product',[\App\Http\Controllers\ProductController::class,'index'])->name('product.index');;

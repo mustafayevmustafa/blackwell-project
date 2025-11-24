@@ -250,32 +250,25 @@
         <span class="cta-btn__text">Get a Quote</span>
     </a>
 </div>
-<section class="about-section-up headersectionimage6 ">
+<div id="top-black-menu" style="width: 100%; height: 30px; background-color: black;" class="fixed-top">
+    <div class="container-fluid container-xl h-100 d-flex justify-content-end gap-4 align-items-center">
+        <a class="text-light" style="font-size: 12px;" href="{{route('home')}}">Home</a>
+        <a class="text-light" style="font-size: 12px;" href="#">Career</a>
+        <a class="text-light" style="font-size: 12px;" href="{{route('technical')}}">Technical Consultation</a>
+        <a class="text-light"  style="font-size: 12px;">
 
-    <div class="about-header">
+            <div class="elfsight-app-d3a63166-be5f-414d-be8e-111b893d9461" data-elfsight-app-lazy></div>
+            <a href="https://elfsight.com/website-translator-widget/?utm_source=websites&amp;utm_medium=clients&amp;utm_content=website-translator&amp;utm_term=127.0.0.1&amp;utm_campaign=free-widget"
+               target="_blank"
+               rel="noreferrer"
+               style="display: none !important;">
+            </a>
 
-        <ul class="bh-breadcrumb__list">
+        </a>
 
-            <!-- Home -->
-            <li class="bh-breadcrumb__item">
-          <span class="bh-breadcrumb__item-text">
-            <a href="./index.html"> Home </a>
-          </span>
-            </li>
 
-            <!-- Breadcrumb Arrow -->
-            <li class="bh-breadcrumb__item">
-                <i class="fa-solid fa-chevron-right"></i>
-            </li>
-
-            <!-- Contact Us -->
-            <li class="bh-breadcrumb__item">
-                <a href="./blog.html" class="bh-breadcrumb__item-text">Blog</a>
-            </li>
-        </ul>
-        <h1>Blog </h1>
     </div>
-</section>
+</div>
 <main class="main ">
     <div class="container my-5">
         <section id="blog-posts" class="blog-posts section py-5">

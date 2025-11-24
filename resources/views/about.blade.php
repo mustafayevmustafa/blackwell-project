@@ -7,9 +7,9 @@
 <body class="about-page">
 <div id="top-black-menu" style="width: 100%; height: 30px; background-color: black;" class="fixed-top">
     <div class="container-fluid container-xl h-100 d-flex justify-content-end gap-4 align-items-center">
-        <a class="text-light" style="font-size: 12px;" href="./index.html">Home</a>
+        <a class="text-light" style="font-size: 12px;" href="{{route('home')}}">Home</a>
         <a class="text-light" style="font-size: 12px;" href="#">Career</a>
-        <a class="text-light" style="font-size: 12px;" href="technical.html">Technical Consultation</a>
+        <a class="text-light" style="font-size: 12px;" href="{{route('technical')}}">Technical Consultation</a>
         <a class="text-light"  style="font-size: 12px;">
 
             <div class="elfsight-app-d3a63166-be5f-414d-be8e-111b893d9461" data-elfsight-app-lazy></div>
