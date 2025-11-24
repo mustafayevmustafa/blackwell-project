@@ -478,10 +478,10 @@
             $('.loading').show();
             $('#check-stock-btn').prop('disabled', true);
 
-            console.log('Sending AJAX request to:', '{{ route("stock.check") }}');
+            console.log('Sending AJAX request to:', '/stock/check');
 
             $.ajax({
-                url: '{{ route("stock.check") }}',
+                url: '/stock/check',
                 method: 'POST',
                 data: {
                     _token: '{{ csrf_token() }}',
