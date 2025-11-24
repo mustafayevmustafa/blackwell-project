@@ -50,9 +50,11 @@ class ServiceContactResource extends Resource
                     ->searchable(),
 
                 Tables\Columns\TextColumn::make('partner')
-                    ->label('Company'),
+                    ->label('Company')
+                    ->searchable(),
 
-                Tables\Columns\TextColumn::make('position'),
+                Tables\Columns\TextColumn::make('position')
+                    ->searchable(),
 
                 Tables\Columns\IconColumn::make('status')
                     ->boolean()

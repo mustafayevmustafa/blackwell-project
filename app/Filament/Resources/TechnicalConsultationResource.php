@@ -43,7 +43,7 @@ class TechnicalConsultationResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')->label('Full Name')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('description')->label('Problem Description')->limit(50),
+                Tables\Columns\TextColumn::make('description')->label('Problem Description')->limit(50)->searchable(),
                 Tables\Columns\TextColumn::make('scheduled_at')->label('Date')->dateTime()->sortable(),
                 Tables\Columns\IconColumn::make('is_completed')->boolean()->label('Completed'),
                 Tables\Columns\TextColumn::make('created_at')->label('Created At')->dateTime()->sortable(),

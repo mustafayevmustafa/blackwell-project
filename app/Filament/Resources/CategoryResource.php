@@ -70,9 +70,10 @@ class CategoryResource extends Resource
                     ->sortable()
                     ->label('ID'),
 
-                Tables\Columns\TextColumn::make('title->en')
-                    ->label('Category (EN)')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('title')
+                    ->label('Category')
+                    ->formatStateUsing(fn ($state) => is_array($state) ? ($state['en'] ?? $state['az'] ?? 'N/A') : $state)
+                    ->searchable(['title->en', 'title->az', 'title->ru', 'title->tr', 'title->de']),
 
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Created At')

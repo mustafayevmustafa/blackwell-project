@@ -97,8 +97,12 @@ class BlogResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')->sortable(),
-                Tables\Columns\TextColumn::make('slug')->label('Slug'),
-                Tables\Columns\TextColumn::make('title->en')->label('Title (EN)'),
+                Tables\Columns\TextColumn::make('slug')
+                    ->label('Slug')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('title->en')
+                    ->label('Title')
+                    ->searchable(),
                 Tables\Columns\ImageColumn::make('image')->label('Image'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Created')

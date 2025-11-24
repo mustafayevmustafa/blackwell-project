@@ -127,15 +127,24 @@ class ProductResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')->sortable(),
-                Tables\Columns\TextColumn::make('slug')->label('Slug'),
+                Tables\Columns\TextColumn::make('slug')
+                    ->label('Slug')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('category.title')
                     ->label('Category')
                     ->formatStateUsing(fn ($state) => is_array($state) ? ($state['en'] ?? $state['az'] ?? 'N/A') : $state)
                     ->sortable()
                     ->searchable(),
-                Tables\Columns\TextColumn::make('title->en')->label('Title (EN)'),
-                Tables\Columns\TextColumn::make('price')->label('Price'),
-                Tables\Columns\TextColumn::make('count')->label('Count')->sortable(),
+                Tables\Columns\TextColumn::make('title')
+                    ->label('Title')
+                    ->formatStateUsing(fn ($state) => is_array($state) ? ($state['en'] ?? $state['az'] ?? 'N/A') : $state)
+                    ->searchable(['title->en', 'title->az', 'title->ru', 'title->tr', 'title->de']),
+                Tables\Columns\TextColumn::make('price')
+                    ->label('Price')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('count')
+                    ->label('Count')
+                    ->sortable(),
                 Tables\Columns\ImageColumn::make('image')->label('Image'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Created')

@@ -94,18 +94,21 @@ class PartnerResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title.en')
-                    ->label('Title (EN)')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('title')
+                    ->label('Title')
+                    ->formatStateUsing(fn ($state) => is_array($state) ? ($state['en'] ?? $state['az'] ?? 'N/A') : $state)
+                    ->searchable(['title->en', 'title->az', 'title->ru', 'title->tr', 'title->de'])
+                    ->sortable(),
 
-                Tables\Columns\ImageColumn::make('image')
+                Tables\Columns\TextColumn::make('image')
                     ->label('Image')
-                    ->square()
-                    ->size(60),
+                    ->url(fn ($record) => $record->url)
+                    ->openUrlInNewTab(),
 
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
-                    ->label('Created'),
+                    ->label('Created')
+                    ->sortable(),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

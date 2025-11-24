@@ -48,13 +48,20 @@ class ContactResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')->label('Name'),
-                Tables\Columns\TextColumn::make('email')->label('Email'),
-                Tables\Columns\TextColumn::make('subject')->label('Subject'),
+                Tables\Columns\TextColumn::make('name')
+                    ->label('Name')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('email')
+                    ->label('Email')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('subject')
+                    ->label('Subject')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('message')
                     ->label('Message')
                     ->limit(50)
-                    ->tooltip(fn($record) => $record->message),
+                    ->tooltip(fn($record) => $record->message)
+                    ->searchable(),
                 Tables\Columns\IconColumn::make('status')
                     ->boolean()
                     ->label('Read'),
