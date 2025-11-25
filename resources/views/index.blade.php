@@ -296,20 +296,30 @@
             <div class="row gy-5 text-center">
 
                 <!-- First Blog Post -->
-                <div class="col-lg-4 col-md-6 custom-card-1 ">
-                    <div class="post-item position-relative h-100 hover-slide" data-aos="fade-up" data-aos-delay="100">
-                        <div class="post-content d-flex flex-column text-start pb-30 ">
-                            <!-- Updated the link to use absolute path with the blog ID -->
-                            <a href="/blog-details.html?id=1"> <!-- Pass blog ID here -->
-                                <span class="slide-header">News</span>
+                @foreach($blogs as $blog)
+                    <div class="col-lg-4 col-md-6 custom-card-1">
+                        <div class="post-item position-relative h-100 hover-slide" data-aos="fade-up" data-aos-delay="100">
+                            <div class="post-content d-flex flex-column text-start pb-30">
 
-                                <span class="post-date">March 28, 2025</span>
-                                <h3 class="slide-title">Sinochem Selects Baker Hughes' Cordant™ for Enterprise-Wide Asset Management</h3>
-                                <hr>
-                            </a>
+                                <a href="{{ url('/blog/' . $blog->slug) }}">
+                                    <span class="slide-header">News</span>
+
+                                    {{-- Dynamic Date --}}
+                                    <span class="post-date">{{ $blog->created_at->format('F d, Y') }}</span>
+
+                                    {{-- Dynamic Title --}}
+                                    <h3 class="slide-title">{{ $blog->title['en'] ?? $blog->title }}</h3>
+
+                                    <hr>
+
+                                    {{-- Optional: Short Description --}}
+                                    <p>{{ Str::limit($blog->content['en'] ?? $blog->content, 120) }}</p>
+                                </a>
+
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
 
             </div>
         </div>

@@ -18,10 +18,10 @@ class HomeController extends Controller
         $teams = Team::all();
         $serviceSections = Section::get();
 
-       $blog = Blog::orderBy('created_at', 'desc')
+       $blogs= Blog::orderBy('created_at', 'desc')
             ->limit(3)
             ->get();
 
-        return view('index', compact('partners','blog', 'panaProducts', 'teams', 'serviceSections'));
+        return view('index', compact('partners','blogs', 'panaProducts', 'teams', 'serviceSections'));
     }
 }
