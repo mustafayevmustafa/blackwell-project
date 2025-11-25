@@ -308,12 +308,12 @@
                                     <span class="post-date">{{ $blog->created_at->format('F d, Y') }}</span>
 
                                     {{-- Dynamic Title --}}
-                                    <h3 class="slide-title">{{ $blog->title['en'] ?? $blog->title }}</h3>
+                                    <h3 class="slide-title">{{ $blog->title['en'] ?? '' }}</h3>
 
                                     <hr>
 
                                     {{-- Optional: Short Description --}}
-                                    <p>{{ Str::limit($blog->content['en'] ?? $blog->content, 120) }}</p>
+                                    <p>{{ Str::limit($blog->content['en'] ?? '', 120) }}</p>
                                 </a>
 
                             </div>
