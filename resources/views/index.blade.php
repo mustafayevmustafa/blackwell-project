@@ -726,573 +726,6 @@
         </iframe>
     </div>
 
-    <!--    <section id="get-started" class="get-started section">-->
-
-    <!--      <div class="container">-->
-
-    <!--        <div class="row justify-content-between gy-4">-->
-
-    <!--          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">-->
-    <!--            <div class="content">-->
-    <!--              <h3>QUOTE.</h3>-->
-    <!--              <p>At Blackwell, we understand the importance of efficiency, reliability, and transparency in procurement-->
-    <!--                for the oil and gas industry. Whether you're sourcing equipment, looking for midstream solutions, or-->
-    <!--                need support with the transportation and storage of oil, gas, or natural gas liquids, we are here to-->
-    <!--                assist you every step of the way.-->
-    <!--                <br>-->
-    <!--                Why Request a Quote?-->
-    <!--                When you're managing complex operations, every decision matters. Getting a detailed quote from Blackwell-->
-    <!--                allows you to:-->
-    <!--                <br>-->
-    <!--                Make Informed Decisions-->
-    <!--                Our quotes are tailored to your specific requirements, providing you with all the information you need-->
-    <!--                to make smart procurement decisions. From pricing details to product specifications, we ensure that-->
-    <!--                everything is transparent from the start.-->
-    <!--                <br>-->
-    <!--                Receive Competitive Pricing-->
-    <!--                We leverage our long-standing relationships with global manufacturers and suppliers to offer you the-->
-    <!--                most competitive rates. Our focus on cost-efficiency helps you reduce operational expenses without-->
-    <!--                compromising on quality.-->
-    <!--                <br>-->
-    <!--                Tailored Solutions for Your Business-->
-    <!--                No two projects are the same. That's why we take the time to understand your specific needs and-->
-    <!--                challenges before providing a quote. Whether it's equipment for onshore or offshore drilling, or-->
-    <!--                sustainable solutions for midstream operations, we have the expertise to deliver what you need..-->
-    <!--              </p>-->
-    <!--            </div>-->
-    <!--          </div>-->
-
-    <!--          <div class="col-lg-5" data-aos="zoom-out" data-aos-delay="200">-->
-    <!--            <form id="quoteForm" action="http://localhost:8083/blackwell/contact/create" method="post"-->
-    <!--              class="php-email-form" enctype="multipart/form-data">-->
-    <!--              <h3>Get a quote</h3>-->
-    <!--              <p></p>-->
-    <!--              <div class="row gy-3">-->
-
-    <!--                <div class="col-12">-->
-    <!--                  <input type="text" id="name" name="name" class="form-control" placeholder="Name" required="">-->
-    <!--                </div>-->
-
-    <!--                <div class="col-12 ">-->
-    <!--                  <input type="email" id="email" class="form-control" name="email" placeholder="Email" required="">-->
-    <!--                </div>-->
-
-    <!--                <div class="col-12">-->
-    <!--                  <input type="text" id="phone" class="form-control" name="phone" placeholder="Phone" required="">-->
-    <!--                </div>-->
-
-    <!--                <div class="col-12">-->
-    <!--                  <textarea class="form-control" id="message" name="message" rows="6" placeholder="Message"-->
-    <!--                    required=""></textarea>-->
-    <!--                </div>-->
-
-    <!--                <div class="col-12 text-center">-->
-    <!--                  <div class="loading">Loading</div>-->
-    <!--                  <div class="error-message"></div>-->
-    <!--                  <div class="sent-message">Your quote request has been sent successfully. Thank you!</div>-->
-
-    <!--                  <button type="submit">Get a quote</button>-->
-    <!--                </div>-->
-
-
-    <!--              </div>-->
-    <!--            </form>-->
-    <!--          </div>-->
-
-    <!--        </div>-->
-
-    <!--      </div>-->
-    <!--      <script>-->
-    <!--        document.getElementById('quoteForm').addEventListener('submit', function (event) {-->
-    <!--          event.preventDefault(); // Formun avtomatik göndərilməsini dayandırır-->
-
-    <!--          const formData = new FormData(this);-->
-    <!--          const data = {-->
-    <!--            name: formData.get('name'),-->
-    <!--            email: formData.get('email'),-->
-    <!--            phone: formData.get('phone'),-->
-    <!--            message: formData.get('message')-->
-    <!--          };-->
-
-    <!--          // İlk API-yə JSON formatında sorğu göndəririk-->
-    <!--          const xhr1 = new XMLHttpRequest();-->
-    <!--          xhr1.open('POST', 'http://localhost:8083/blackwell/contact/create', true);-->
-    <!--          xhr1.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');-->
-    <!--          xhr1.onload = function () {-->
-    <!--            if (xhr1.status === 200) {-->
-    <!--              console.log("First request successful");-->
-    <!--              alert("Your quote request has been sent successfully."); // Uğurlu mesaj-->
-    <!--              document.querySelector('.error-message').style.display = 'none'-->
-    <!--            } else {-->
-    <!--              console.log("Failed to send first request");-->
-    <!--            }-->
-    <!--          };-->
-    <!--          xhr1.send(JSON.stringify(data));-->
-    <!--        });-->
-    <!--      </script>-->
-    <!--    </section>-->
-
-    <!--    <section id="constructions" class="constructions section">-->
-
-
-    <!--      <div class="container section-title" data-aos="fade-up">-->
-    <!--        <h2>INDUSTRY</h2>-->
-    <!--        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>-->
-    <!--      </div>-->
-
-    <!--      <div class="container">-->
-
-    <!--        <div class="row gy-4">-->
-
-    <!--          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">-->
-    <!--            <div class="card-item">-->
-    <!--              <div class="row">-->
-    <!--                <div class="col-xl-5">-->
-    <!--                  <div class="card-bg"><img src="assets/img/constructions-1.jpg" alt=""></div>-->
-    <!--                </div>-->
-    <!--                <div class="col-xl-7 d-flex align-items-center">-->
-    <!--                  <div class="card-body">-->
-    <!--                    <h4 class="card-title">OIL AND GAS.</h4>-->
-    <!--                    <p>From upstream oil and gas operations to downstream refining and petrochemical facilities,-->
-    <!--                      Blackwell’s unique combination of comprehensive procurement and tailor-made engineering services-->
-    <!--                      deliver “fit for purpose” solutions with the right balance of safety measures, economics, and-->
-    <!--                      timeliness for our customers. We know that each division of the industry relies on quality-->
-    <!--                      materials to keep their operations moving forward. Our goal always is to provide you with on-time-->
-    <!--                      delivery of quality products at the best prices.</p>-->
-    <!--                  </div>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>-->
-    <!--          </div>-->
-
-    <!--          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">-->
-    <!--            <div class="card-item">-->
-    <!--              <div class="row">-->
-    <!--                <div class="col-xl-5">-->
-    <!--                  <div class="card-bg"><img src="assets/img/constructions-2.jpg" alt=""></div>-->
-    <!--                </div>-->
-    <!--                <div class="col-xl-7 d-flex align-items-center">-->
-    <!--                  <div class="card-body">-->
-    <!--                    <h4 class="card-title">CHEMICAL AND PETROCHEMICAL</h4>-->
-    <!--                    <p>Petrochemical industry is constantly undergoing a major transformation changing market dynamics-->
-    <!--                      and nonlinear supply chains. This results in managers making great efforts to harmonize their-->
-    <!--                      supplier, sourcing and supply chain processes. Obtaining the right materials at the right price,-->
-    <!--                      right time complying to all safety and regulatory requirements is fundamental to the-->
-    <!--                      profitability. Therefore, it requires the buyers to have a deep knowledge of the product and-->
-    <!--                      perhaps certify every source of supply..</p>-->
-    <!--                  </div>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>-->
-    <!--          </div>-->
-
-    <!--          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">-->
-    <!--            <div class="card-item">-->
-    <!--              <div class="row">-->
-    <!--                <div class="col-xl-5">-->
-    <!--                  <div class="card-bg"><img src="assets/img/constructions-3.jpg" alt=""></div>-->
-    <!--                </div>-->
-    <!--                <div class="col-xl-7 d-flex align-items-center">-->
-    <!--                  <div class="card-body">-->
-    <!--                    <h4 class="card-title">ENERGY</h4>-->
-    <!--                    <p>As the world enters a technology-driven energy transition, energy enterprises will rely more and-->
-    <!--                      more on their procurement and supply-management capabilities to meet cost targets, secure-->
-    <!--                      supplies, improve safety and reliability, innovate, and optimize the total cost of ownership.-->
-    <!--                      Using our proven tools and approaches, we work hand in hand with clients to equip them for success-->
-    <!--                      in a challenging landscape. We help utilities and independent power producers to become-->
-    <!--                      world-class purchasing leaders by adopting advanced procurement and supply-management capabilities-->
-    <!--                      across all materials, services, operating, and capital-spending categorie.</p>-->
-    <!--                  </div>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>-->
-    <!--          </div>-->
-
-    <!--          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">-->
-    <!--            <div class="card-item">-->
-    <!--              <div class="row">-->
-    <!--                <div class="col-xl-5">-->
-    <!--                  <div class="card-bg"><img src="assets/img/constructions-4.jpg" alt=""></div>-->
-    <!--                </div>-->
-    <!--                <div class="col-xl-7 d-flex align-items-center">-->
-    <!--                  <div class="card-body">-->
-    <!--                    <h4 class="card-title">MARINE</h4>-->
-    <!--                    <p>In the marine offshore and shipbuilding industry internationally the demand and hence trade-->
-    <!--                      within the industry is increasing which puts an added pressure on the supply chain and especially-->
-    <!--                      the procurement functions to be effective and utilize the vendor relationships to the best-->
-    <!--                      advantage. The challenges in this industry are specific knowledge requirement, and high turnover-->
-    <!--                      of products requires continuous low cost transactions. To this end, Blackwell has established-->
-    <!--                      reliable cooperation with the vendors across the world and our engineers with rich industry-->
-    <!--                      experience bring most effective solutions for your company.</p>-->
-    <!--                  </div>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>-->
-    <!--          </div>-->
-
-    <!--        </div>-->
-
-    <!--      </div>-->
-
-    <!--    </section>-->
-
-    <!-- /Constructions Section -->
-
-    <!-- Services Section -->
-    <!--    <section id="services" class="services section light-background">-->
-
-    <!--      &lt;!&ndash; Section Title &ndash;&gt;-->
-    <!--      <div class="container section-title" data-aos="fade-up">-->
-    <!--        <h2>Services</h2>-->
-    <!--        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>-->
-    <!--      </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
-
-    <!--      <div class="container">-->
-
-    <!--        <div class="row gy-4">-->
-
-    <!--          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">-->
-    <!--            <div class="service-item  position-relative">-->
-    <!--              <div class="icon">-->
-    <!--                <i class="fa-solid fa-mountain-city"></i>-->
-    <!--              </div>-->
-    <!--              <h3>Nesciunt Mete</h3>-->
-    <!--              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis-->
-    <!--                tempore et consequatur.</p>-->
-    <!--              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>-->
-    <!--            </div>-->
-    <!--          </div>&lt;!&ndash; End Service Item &ndash;&gt;-->
-
-    <!--          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">-->
-    <!--            <div class="service-item position-relative">-->
-    <!--              <div class="icon">-->
-    <!--                <i class="fa-solid fa-arrow-up-from-ground-water"></i>-->
-    <!--              </div>-->
-    <!--              <h3>Eosle Commodi</h3>-->
-    <!--              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut-->
-    <!--                nesciunt dolorem.</p>-->
-    <!--              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>-->
-    <!--            </div>-->
-    <!--          </div>&lt;!&ndash; End Service Item &ndash;&gt;-->
-
-    <!--          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">-->
-    <!--            <div class="service-item position-relative">-->
-    <!--              <div class="icon">-->
-    <!--                <i class="fa-solid fa-compass-drafting"></i>-->
-    <!--              </div>-->
-    <!--              <h3>Ledo Markt</h3>-->
-    <!--              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci-->
-    <!--                eos earum corrupti.</p>-->
-    <!--              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>-->
-    <!--            </div>-->
-    <!--          </div>&lt;!&ndash; End Service Item &ndash;&gt;-->
-
-    <!--          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">-->
-    <!--            <div class="service-item position-relative">-->
-    <!--              <div class="icon">-->
-    <!--                <i class="fa-solid fa-trowel-bricks"></i>-->
-    <!--              </div>-->
-    <!--              <h3>Asperiores Commodit</h3>-->
-    <!--              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident-->
-    <!--                adipisci neque.</p>-->
-    <!--              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>-->
-    <!--            </div>-->
-    <!--          </div>&lt;!&ndash; End Service Item &ndash;&gt;-->
-
-    <!--          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">-->
-    <!--            <div class="service-item position-relative">-->
-    <!--              <div class="icon">-->
-    <!--                <i class="fa-solid fa-helmet-safety"></i>-->
-    <!--              </div>-->
-    <!--              <h3>Velit Doloremque</h3>-->
-    <!--              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem-->
-    <!--                alias eius labore.</p>-->
-    <!--              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>-->
-    <!--            </div>-->
-    <!--          </div>&lt;!&ndash; End Service Item &ndash;&gt;-->
-
-    <!--          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">-->
-    <!--            <div class="service-item position-relative">-->
-    <!--              <div class="icon">-->
-    <!--                <i class="fa-solid fa-arrow-up-from-ground-water"></i>-->
-    <!--              </div>-->
-    <!--              <h3>Dolori Architecto</h3>-->
-    <!--              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti-->
-    <!--                recusandae ducimus enim.</p>-->
-    <!--              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>-->
-    <!--            </div>-->
-    <!--          </div>&lt;!&ndash; End Service Item &ndash;&gt;-->
-
-    <!--        </div>-->
-
-    <!--      </div>-->
-
-    <!--    </section>&lt;!&ndash; /Services Section &ndash;&gt;-->
-
-    <!-- Alt Services Section -->
-    <!--    <section id="alt-services" class="alt-services section">-->
-
-    <!--      <div class="container">-->
-
-    <!--        <div class="row justify-content-around gy-4">-->
-    <!--          <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img-->
-    <!--              src="assets/img/alt-services.jpg" alt=""></div>-->
-
-    <!--          <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">-->
-    <!--            <h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>-->
-    <!--            <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus-->
-    <!--              laudantium. Soluta voluptate sed facere corporis dolores excepturi</p>-->
-
-    <!--            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">-->
-    <!--              <i class="bi bi-easel flex-shrink-0"></i>-->
-    <!--              <div>-->
-    <!--                <h4><a href="" class="stretched-link">Lorem Ipsum</a></h4>-->
-    <!--                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate-->
-    <!--                  non provident</p>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End Icon Box &ndash;&gt;-->
-
-    <!--            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">-->
-    <!--              <i class="bi bi-patch-check flex-shrink-0"></i>-->
-    <!--              <div>-->
-    <!--                <h4><a href="" class="stretched-link">Nemo Enim</a></h4>-->
-    <!--                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum-->
-    <!--                  deleniti atque</p>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End Icon Box &ndash;&gt;-->
-
-    <!--            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="500">-->
-    <!--              <i class="bi bi-brightness-high flex-shrink-0"></i>-->
-    <!--              <div>-->
-    <!--                <h4><a href="" class="stretched-link">Dine Pad</a></h4>-->
-    <!--                <p>Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus-->
-    <!--                  aut eligendi omnis</p>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End Icon Box &ndash;&gt;-->
-
-    <!--            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">-->
-    <!--              <i class="bi bi-brightness-high flex-shrink-0"></i>-->
-    <!--              <div>-->
-    <!--                <h4><a href="" class="stretched-link">Tride clov</a></h4>-->
-    <!--                <p>Est voluptatem labore deleniti quis a delectus et. Saepe dolorem libero sit non aspernatur odit amet.-->
-    <!--                  Et eligendi</p>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End Icon Box &ndash;&gt;-->
-
-    <!--          </div>-->
-    <!--        </div>-->
-
-    <!--      </div>-->
-
-    <!--    </section>&lt;!&ndash; /Alt Services Section &ndash;&gt;-->
-
-    <!-- Features Section -->
-
-
-    <!--    &lt;!&ndash; Projects Section &ndash;&gt;-->
-    <!--    <section id="projects" class="projects section">-->
-
-    <!--      &lt;!&ndash; Section Title &ndash;&gt;-->
-    <!--      <div class="container section-title" data-aos="fade-up">-->
-    <!--        <h2>Projects</h2>-->
-    <!--        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>-->
-    <!--      </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
-
-    <!--      <div class="container">-->
-
-    <!--        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">-->
-
-    <!--          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">-->
-    <!--            <li data-filter="*" class="filter-active">All</li>-->
-    <!--            <li data-filter=".filter-remodeling">Remodeling</li>-->
-    <!--            <li data-filter=".filter-construction">Construction</li>-->
-    <!--            <li data-filter=".filter-repairs">Repairs</li>-->
-    <!--            <li data-filter=".filter-design">Design</li>-->
-    <!--          </ul>&lt;!&ndash; End Portfolio Filters &ndash;&gt;-->
-
-    <!--          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">-->
-
-    <!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">-->
-    <!--              <div class="portfolio-content h-100">-->
-    <!--                <img src="assets/img/projects/remodeling-1.jpg" class="img-fluid" alt="">-->
-    <!--                <div class="portfolio-info">-->
-    <!--                  <h4>App 1</h4>-->
-    <!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-    <!--                  <a href="assets/img/projects/remodeling-1.jpg" title="App 1" data-gallery="portfolio-gallery-app"-->
-    <!--                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-    <!--                  <a href="project-details.html" title="More Details" class="details-link"><i-->
-    <!--                      class="bi bi-link-45deg"></i></a>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-    <!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">-->
-    <!--              <div class="portfolio-content h-100">-->
-    <!--                <img src="assets/img/projects/construction-1.jpg" class="img-fluid" alt="">-->
-    <!--                <div class="portfolio-info">-->
-    <!--                  <h4>Product 1</h4>-->
-    <!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-    <!--                  <a href="assets/img/projects/construction-1.jpg" title="Product 1"-->
-    <!--                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i-->
-    <!--                      class="bi bi-zoom-in"></i></a>-->
-    <!--                  <a href="project-details.html" title="More Details" class="details-link"><i-->
-    <!--                      class="bi bi-link-45deg"></i></a>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-    <!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">-->
-    <!--              <div class="portfolio-content h-100">-->
-    <!--                <img src="assets/img/projects/repairs-1.jpg" class="img-fluid" alt="">-->
-    <!--                <div class="portfolio-info">-->
-    <!--                  <h4>Branding 1</h4>-->
-    <!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-    <!--                  <a href="assets/img/projects/repairs-1.jpg" title="Branding 1"-->
-    <!--                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i-->
-    <!--                      class="bi bi-zoom-in"></i></a>-->
-    <!--                  <a href="project-details.html" title="More Details" class="details-link"><i-->
-    <!--                      class="bi bi-link-45deg"></i></a>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-    <!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">-->
-    <!--              <div class="portfolio-content h-100">-->
-    <!--                <img src="assets/img/projects/design-1.jpg" class="img-fluid" alt="">-->
-    <!--                <div class="portfolio-info">-->
-    <!--                  <h4>Books 1</h4>-->
-    <!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-    <!--                  <a href="assets/img/projects/design-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book"-->
-    <!--                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-    <!--                  <a href="project-details.html" title="More Details" class="details-link"><i-->
-    <!--                      class="bi bi-link-45deg"></i></a>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-    <!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">-->
-    <!--              <div class="portfolio-content h-100">-->
-    <!--                <img src="assets/img/projects/remodeling-2.jpg" class="img-fluid" alt="">-->
-    <!--                <div class="portfolio-info">-->
-    <!--                  <h4>App 2</h4>-->
-    <!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-    <!--                  <a href="assets/img/projects/remodeling-2.jpg" title="App 2" data-gallery="portfolio-gallery-app"-->
-    <!--                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-    <!--                  <a href="project-details.html" title="More Details" class="details-link"><i-->
-    <!--                      class="bi bi-link-45deg"></i></a>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-    <!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">-->
-    <!--              <div class="portfolio-content h-100">-->
-    <!--                <img src="assets/img/projects/construction-2.jpg" class="img-fluid" alt="">-->
-    <!--                <div class="portfolio-info">-->
-    <!--                  <h4>Product 2</h4>-->
-    <!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-    <!--                  <a href="assets/img/projects/construction-2.jpg" title="Product 2"-->
-    <!--                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i-->
-    <!--                      class="bi bi-zoom-in"></i></a>-->
-    <!--                  <a href="project-details.html" title="More Details" class="details-link"><i-->
-    <!--                      class="bi bi-link-45deg"></i></a>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-    <!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">-->
-    <!--              <div class="portfolio-content h-100">-->
-    <!--                <img src="assets/img/projects/repairs-2.jpg" class="img-fluid" alt="">-->
-    <!--                <div class="portfolio-info">-->
-    <!--                  <h4>Branding 2</h4>-->
-    <!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-    <!--                  <a href="assets/img/projects/repairs-2.jpg" title="Branding 2"-->
-    <!--                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i-->
-    <!--                      class="bi bi-zoom-in"></i></a>-->
-    <!--                  <a href="project-details.html" title="More Details" class="details-link"><i-->
-    <!--                      class="bi bi-link-45deg"></i></a>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-    <!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">-->
-    <!--              <div class="portfolio-content h-100">-->
-    <!--                <img src="assets/img/projects/design-2.jpg" class="img-fluid" alt="">-->
-    <!--                <div class="portfolio-info">-->
-    <!--                  <h4>Books 2</h4>-->
-    <!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-    <!--                  <a href="assets/img/projects/design-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book"-->
-    <!--                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-    <!--                  <a href="project-details.html" title="More Details" class="details-link"><i-->
-    <!--                      class="bi bi-link-45deg"></i></a>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-    <!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">-->
-    <!--              <div class="portfolio-content h-100">-->
-    <!--                <img src="assets/img/projects/remodeling-3.jpg" class="img-fluid" alt="">-->
-    <!--                <div class="portfolio-info">-->
-    <!--                  <h4>App 3</h4>-->
-    <!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-    <!--                  <a href="assets/img/projects/remodeling-3.jpg" title="App 3" data-gallery="portfolio-gallery-app"-->
-    <!--                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-    <!--                  <a href="project-details.html" title="More Details" class="details-link"><i-->
-    <!--                      class="bi bi-link-45deg"></i></a>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-    <!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">-->
-    <!--              <div class="portfolio-content h-100">-->
-    <!--                <img src="assets/img/projects/construction-3.jpg" class="img-fluid" alt="">-->
-    <!--                <div class="portfolio-info">-->
-    <!--                  <h4>Product 3</h4>-->
-    <!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-    <!--                  <a href="assets/img/projects/construction-3.jpg" title="Product 3"-->
-    <!--                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i-->
-    <!--                      class="bi bi-zoom-in"></i></a>-->
-    <!--                  <a href="project-details.html" title="More Details" class="details-link"><i-->
-    <!--                      class="bi bi-link-45deg"></i></a>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-    <!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">-->
-    <!--              <div class="portfolio-content h-100">-->
-    <!--                <img src="assets/img/projects/repairs-3.jpg" class="img-fluid" alt="">-->
-    <!--                <div class="portfolio-info">-->
-    <!--                  <h4>Branding 3</h4>-->
-    <!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-    <!--                  <a href="assets/img/projects/repairs-3.jpg" title="Branding 2"-->
-    <!--                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i-->
-    <!--                      class="bi bi-zoom-in"></i></a>-->
-    <!--                  <a href="project-details.html" title="More Details" class="details-link"><i-->
-    <!--                      class="bi bi-link-45deg"></i></a>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-    <!--            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">-->
-    <!--              <div class="portfolio-content h-100">-->
-    <!--                <img src="assets/img/projects/design-3.jpg" class="img-fluid" alt="">-->
-    <!--                <div class="portfolio-info">-->
-    <!--                  <h4>Books 3</h4>-->
-    <!--                  <p>Lorem ipsum, dolor sit amet consectetur</p>-->
-    <!--                  <a href="assets/img/projects/design-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book"-->
-    <!--                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-    <!--                  <a href="project-details.html" title="More Details" class="details-link"><i-->
-    <!--                      class="bi bi-link-45deg"></i></a>-->
-    <!--                </div>-->
-    <!--              </div>-->
-    <!--            </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-
-    <!--          </div>&lt;!&ndash; End Portfolio Container &ndash;&gt;-->
-
-    <!--        </div>-->
-
-    <!--      </div>-->
-
-    <!--    </section>&lt;!&ndash; /Projects Section &ndash;&gt;-->
     </script>
     <div class="container my-5">
         <h3>Resources</h3>
@@ -1449,8 +882,70 @@
         </div>
     </div>
 
+@include('sections.partner')
+{{--    <section class="LogosSection container">--}}
+{{--        <h3 class="bh-cke-eyebrow-heading">--}}
+{{--            Our Partner--}}
+{{--        </h3>--}}
 
-  @include('sections.partners')
+{{--        <div class="Logosmain ">--}}
+
+{{--            <div class="">--}}
+{{--                <div class="row">--}}
+
+
+{{--                    <div class="col-lg-6">--}}
+{{--                        <div class="logos-container12">--}}
+{{--                            <div class="logos12" id="logos12"></div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-lg-6">--}}
+{{--                        <div class="details12 " id="details12">--}}
+{{--                            <div class="col-lg-12 order-2 order-lg-1">--}}
+{{--                                <h3 id="logo-name12"></h3>--}}
+{{--                                <div class="details-content12">--}}
+{{--                                    <div class="details-header12">--}}
+{{--                                        <p id="logo-description12" class="text-dark description-trimmed"--}}
+{{--                                           style="font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.5; overflow: hidden;">--}}
+{{--                                            <!-- Açıklama metni buraya dinamik olarak JS ile gelecek -->--}}
+{{--                                        </p>--}}
+{{--                                        <button id="toggle-description" class="btn btn-link p-0" style="font-size: 0.9rem;">Read--}}
+{{--                                            more</button>--}}
+{{--                                        <script>--}}
+{{--                                            const desc = document.getElementById('logo-description12');--}}
+{{--                                            const toggleBtn = document.getElementById('toggle-description');--}}
+
+{{--                                            toggleBtn.addEventListener('click', function () {--}}
+{{--                                                const isExpanded = desc.classList.contains('description-expanded');--}}
+{{--                                                desc.classList.toggle('description-expanded');--}}
+{{--                                                desc.classList.toggle('description-trimmed');--}}
+{{--                                                toggleBtn.textContent = isExpanded ? 'Read more' : 'Read less';--}}
+{{--                                            });--}}
+{{--                                        </script>--}}
+
+
+{{--                                    </div>--}}
+
+{{--                                </div>--}}
+
+
+{{--                            </div>--}}
+{{--                            <div class="col-lg-6 order-1 order-lg-2">--}}
+{{--                                <a href="" class="data-url12" target="_blank">--}}
+
+{{--                                    <img id="logo-image12" src="" alt="" />--}}
+{{--                                </a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+
+
+{{--                    </div>--}}
+{{--                </div>--}}
+
+
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     <script>
         const desc = document.getElementById('logo-description12');
