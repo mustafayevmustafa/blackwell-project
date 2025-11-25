@@ -311,43 +311,6 @@
                     </div>
                 </div>
 
-
-                <!-- Second Blog Post -->
-                <div class="col-lg-4 col-md-6 custom-card-2">
-                    <div class="post-item position-relative h-100 hover-slide" data-aos="fade-up" data-aos-delay="200">
-                        <div class="post-content d-flex flex-column text-start">
-                            <a href="/blog-details.html">
-
-                                <span class="slide-header">Energy Forward</span>
-
-                                <span class="post-date">March 26, 2025</span>
-                                <h3 class="slide-title">How GenAI is driving the art of the possible</h3>
-
-                                <hr>
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Third Blog Post -->
-                <div class="col-lg-4 col-md-6 custom-card-3">
-                    <div class="post-item position-relative h-100 hover-slide" data-aos="fade-up" data-aos-delay="300">
-                        <div class="post-content d-flex flex-column text-start">
-                            <a href="/blog-details.html">
-
-                                <span class="slide-header">Press Release</span>
-
-                                <span class="post-date">March 26, 2025</span>
-                                <h3 class="slide-title">Baker Hughes Awarded Integrated Coiled-Tubing Drilling Contract</h3>
-
-                                <hr>
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>

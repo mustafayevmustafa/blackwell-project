@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Partner;
 use App\Models\PanaProduct;
 use App\Models\Section;
@@ -16,6 +17,11 @@ class HomeController extends Controller
         $panaProducts = PanaProduct::where('is_active', true)->orderBy('order')->get();
         $teams = Team::all();
         $serviceSections = Section::get();
-        return view('index', compact('partners', 'panaProducts', 'teams', 'serviceSections'));
+
+       $blog = Blog::orderBy('created_at', 'desc')
+            ->limit(3)
+            ->get();
+
+        return view('index', compact('partners','blog', 'panaProducts', 'teams', 'serviceSections'));
     }
 }
