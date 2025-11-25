@@ -4,6 +4,8 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\TeamResource\Pages\ListTeams;
+use App\Filament\Resources\TeamResource\Pages\CreateTeam;
+use App\Filament\Resources\TeamResource\Pages\EditTeam;
 use App\Models\Team;
 use Filament\Forms;
 use Filament\Tables;
@@ -74,6 +76,7 @@ class TeamResource extends Resource
         ])
             ->actions([
                 Tables\Actions\ViewAction::make(),
+                Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
@@ -85,16 +88,18 @@ class TeamResource extends Resource
     {
         return [
             'index' => ListTeams::route('/'),
+            'create' => CreateTeam::route('/create'),
+            'edit' => EditTeam::route('/{record}/edit'),
         ];
     }
 
     public static function canCreate(): bool
     {
-        return false;
+        return true;
     }
 
     public static function canEdit($record): bool
     {
-        return false;
+        return true;
     }
 }
