@@ -3,8 +3,6 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\TeamResource\Pages\CreateTeam;
-use App\Filament\Resources\TeamResource\Pages\EditTeam;
 use App\Filament\Resources\TeamResource\Pages\ListTeams;
 use App\Models\Team;
 use Filament\Forms;

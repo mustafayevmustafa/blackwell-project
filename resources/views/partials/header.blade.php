@@ -14,118 +14,6 @@
                 <li><a href="{{route('product.index')}}">Product</a></li>
                 <li><a href="partners.html">Partners</a></li>
                 <li><a href="{{route('blog.index')}}">Blog</a></li>
-
-
-
-                <li class="dropdown"><a class="text-dark">Dropdown<span></span> <i
-                            class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-
-                        <li class="dropdown black"><a><span class="text-dark">Partner</span> <i
-                                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="./dropdown pages/partners/tab-1.html">Deep Dropdown 1</a></li>
-                                <li><a href="./dropdown pages/partners/tab-2.html">Deep Dropdown 2</a></li>
-                                <li><a href="./dropdown pages/partners/tab-3.html">Deep Dropdown 3</a></li>
-                                <li><a href="./dropdown pages/partners/tab-4.html">Deep Dropdown 4</a></li>
-                                <li><a href="./dropdown pages/partners/tab-5.html">Deep Dropdown 5</a></li>
-                                <li><a href="./dropdown pages/partners/tab-6.html">Deep Dropdown 6</a></li>
-                                <li><a href="./dropdown pages/partners/tab-7.html">Deep Dropdown 7</a></li>
-                                <li><a href="./dropdown pages/partners/tab-8.html">Deep Dropdown 8</a></li>
-                                <li><a href="./dropdown pages/partners/tab-9.html">Deep Dropdown 9</a></li>
-                                <li><a href="./dropdown pages/partners/tab-10.html">Deep Dropdown 10</a></li>
-                                <li><a href="./dropdown pages/partners/tab-11.html">Deep Dropdown 11</a></li>
-                                <li><a href="./dropdown pages/partners/tab-12.html">Deep Dropdown 12</a></li>
-                                <li><a href="./dropdown pages/partners/tab-13.html">Deep Dropdown 13</a></li>
-                                <li><a href="./dropdown pages/partners/tab-14.html">Deep Dropdown 14</a></li>
-                                <li><a href="./dropdown pages/partners/tab-15.html">Deep Dropdown 15</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown black"><a><span class="text-dark">Block</span> <i
-                                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="./dropdown pages/block/tab-1.html">Deep Dropdown 1</a></li>
-                                <li><a href="./dropdown pages/block/tab-2.html">Deep Dropdown 2</a></li>
-                                <li><a href="./dropdown pages/block/tab-3.html">Deep Dropdown 3</a></li>
-                                <li><a href="./dropdown pages/block/tab-4.html">Deep Dropdown 4</a></li>
-                                <li><a href="./dropdown pages/block/tab-5.html">Deep Dropdown 5</a></li>
-                                <li><a href="./dropdown pages/block/tab-6.html">Deep Dropdown 6</a></li>
-                                <li><a href="./dropdown pages/block/tab-7.html">Deep Dropdown 7</a></li>
-                                <li><a href="./dropdown pages/block/tab-8.html">Deep Dropdown 8</a></li>
-                                <li><a href="./dropdown pages/block/tab-9.html">Deep Dropdown 9</a></li>
-                                <li><a href="./dropdown pages/block/tab-10.html">Deep Dropdown 10</a></li>
-                                <li><a href="./dropdown pages/block/tab-11.html">Deep Dropdown 11</a></li>
-                                <li><a href="./dropdown pages/block/tab-12.html">Deep Dropdown 12</a></li>
-                                <li><a href="./dropdown pages/block/tab-13.html">Deep Dropdown 13</a></li>
-                                <li><a href="./dropdown pages/block/tab-14.html">Deep Dropdown 14</a></li>
-                                <li><a href="./dropdown pages/block/tab-15.html">Deep Dropdown 15</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown black"><a><span class="text-dark">Dropdown</span> <i
-                                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="./dropdown pages/dropdown/tab-1.html">Deep Dropdown 1</a></li>
-                                <li><a href="./dropdown pages/dropdown/tab-2.html">Deep Dropdown 2</a></li>
-                                <li><a href="./dropdown pages/dropdown/tab-3.html">Deep Dropdown 3</a></li>
-                                <li><a href="./dropdown pages/dropdown/tab-4.html">Deep Dropdown 4</a></li>
-                                <li><a href="./dropdown pages/dropdown/tab-5.html">Deep Dropdown 5</a></li>
-                                <li><a href="./dropdown pages/dropdown/tab-6.html">Deep Dropdown 6</a></li>
-                                <li><a href="./dropdown pages/dropdown/tab-7.html">Deep Dropdown 7</a></li>
-                                <li><a href="./dropdown pages/dropdown/tab-8.html">Deep Dropdown 8</a></li>
-                                <li><a href="./dropdown pages/dropdown/tab-9.html">Deep Dropdown 9</a></li>
-                                <li><a href="./dropdown pages/dropdown/tab-10.html">Deep Dropdown 10</a></li>
-                                <li><a href="./dropdown pages/dropdown/tab-11.html">Deep Dropdown 11</a></li>
-                                <li><a href="./dropdown pages/dropdown/tab-12.html">Deep Dropdown 12</a></li>
-                                <li><a href="./dropdown pages/dropdown/tab-13.html">Deep Dropdown 13</a></li>
-                                <li><a href="./dropdown pages/dropdown/tab-14.html">Deep Dropdown 14</a></li>
-                                <li><a href="./dropdown pages/dropdown/tab-15.html">Deep Dropdown 15</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown black"><a><span class="text-dark">Contact</span> <i
-                                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="./dropdown pages/contact/tab-1.html">Deep Dropdown 1</a></li>
-                                <li><a href="./dropdown pages/contact/tab-2.html">Deep Dropdown 2</a></li>
-                                <li><a href="./dropdown pages/contact/tab-3.html">Deep Dropdown 3</a></li>
-                                <li><a href="./dropdown pages/contact/tab-4.html">Deep Dropdown 4</a></li>
-                                <li><a href="./dropdown pages/contact/tab-5.html">Deep Dropdown 5</a></li>
-                                <li><a href="./dropdown pages/contact/tab-6.html">Deep Dropdown 6</a></li>
-                                <li><a href="./dropdown pages/contact/tab-7.html">Deep Dropdown 7</a></li>
-                                <li><a href="./dropdown pages/contact/tab-8.html">Deep Dropdown 8</a></li>
-                                <li><a href="./dropdown pages/contact/tab-9.html">Deep Dropdown 9</a></li>
-                                <li><a href="./dropdown pages/contact/tab-10.html">Deep Dropdown 10</a></li>
-                                <li><a href="./dropdown pages/contact/tab-11.html">Deep Dropdown 11</a></li>
-                                <li><a href="./dropdown pages/contact/tab-12.html">Deep Dropdown 12</a></li>
-                                <li><a href="./dropdown pages/contact/tab-13.html">Deep Dropdown 13</a></li>
-                                <li><a href="./dropdown pages/contact/tab-14.html">Deep Dropdown 14</a></li>
-                                <li><a href="./dropdown pages/contact/tab-15.html">Deep Dropdown 15</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown black"><a><span class="text-dark">Dropdown Second</span> <i
-                                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="./dropdown pages/dropdown second/tab-1.html">Deep Dropdown 1</a></li>
-                                <li><a href="./dropdown pages/dropdown second/tab-2.html">Deep Dropdown 2</a></li>
-                                <li><a href="./dropdown pages/dropdown second/tab-3.html">Deep Dropdown 3</a></li>
-                                <li><a href="./dropdown pages/dropdown second/tab-4.html">Deep Dropdown 4</a></li>
-                                <li><a href="./dropdown pages/dropdown second/tab-5.html">Deep Dropdown 5</a></li>
-                                <li><a href="./dropdown pages/dropdown second/tab-6.html">Deep Dropdown 6</a></li>
-                                <li><a href="./dropdown pages/dropdown second/tab-7.html">Deep Dropdown 7</a></li>
-                                <li><a href="./dropdown pages/dropdown second/tab-8.html">Deep Dropdown 8</a></li>
-                                <li><a href="./dropdown pages/dropdown second/tab-9.html">Deep Dropdown 9</a></li>
-                                <li><a href="./dropdown pages/dropdown second/tab-10.html">Deep Dropdown 10</a></li>
-                                <li><a href="./dropdown pages/dropdown second/tab-11.html">Deep Dropdown 11</a></li>
-                                <li><a href="./dropdown pages/dropdown second/tab-12.html">Deep Dropdown 12</a></li>
-                                <li><a href="./dropdown pages/dropdown second/tab-13.html">Deep Dropdown 13</a></li>
-                                <li><a href="./dropdown pages/dropdown second/tab-14.html">Deep Dropdown 14</a></li>
-                                <li><a href="./dropdown pages/dropdown second/tab-15.html">Deep Dropdown 15</a></li>
-                            </ul>
-                        </li>
-
-
-
-                    </ul>
-                </li>
                 <li><a href="{{route('contact.index')}}">Contact</a></li>
                 <!-- translate for mobile -->
                 <li>
@@ -146,8 +34,6 @@
                 <li><a href="{{route('stock')}}">Our Stock</a></li>
                 <li><a href="{{route('product.index')}}"> Product</a></li>
                 <li><a href="{{route('blog.index')}}">Blog</a></li>
-                <li><a class="dropdown-style" onclick="toggleDropdownMenu()" style="color: black;"><span>Dropdown</span> <i
-                            class="bi bi-chevron-down toggle-dropdown"></i></a></li>
                 <li><a href="{{route('contact.index')}}">Contact</a></li>
             </ul>
 
